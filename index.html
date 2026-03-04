@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Deals Dashboard</title>
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #161921;
+    --surface2: #1e2130;
+    --border: #2a2f45;
+    --gold: #c9a84c;
+    --gold2: #e8c96a;
+    --text: #e8eaf0;
+    --muted: #7a8099;
+    --green: #4caf82;
+    --yellow: #e8c041;
+    --red: #e05c5c;
+    --blue: #5b8dee;
+    --tag-bg: #1e2336;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; min-height: 100vh; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #0d0f14 0%, #161921 100%); border-bottom: 1px solid var(--border); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .header-left h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+  .header-left h1 span { color: var(--gold); }
+  .header-left p { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .header-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-value { font-size: 20px; font-weight: 700; color: var(--gold); }
+  .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+  /* DATE TABS */
+  .date-tabs { padding: 16px 32px 0; display: flex; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+  .date-tab { padding: 8px 16px; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 13px; color: var(--muted); border: 1px solid transparent; border-bottom: none; white-space: nowrap; transition: all 0.15s; }
+  .date-tab:hover { color: var(--text); background: var(--surface2); }
+  .date-tab.active { color: var(--gold); background: var(--surface); border-color: var(--border); border-bottom-color: var(--surface); }
+
+  /* FILTERS */
+  .filters { padding: 16px 32px; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .filter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-right: 4px; }
+  .filter-btn { padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--tag-bg); color: var(--muted); cursor: pointer; font-size: 12px; transition: all 0.15s; white-space: nowrap; }
+  .filter-btn:hover { border-color: var(--gold); color: var(--text); }
+  .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 600; }
+  .filter-sep { width: 1px; height: 24px; background: var(--border); }
+  .filter-sort { padding: 5px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--tag-bg); color: var(--text); font-size: 12px; cursor: pointer; }
+  .filter-sort option { background: var(--surface2); }
+
+  /* SUMMARY BAR */
+  .summary-bar { margin: 20px 32px 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 20px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .summary-bar strong { color: var(--text); }
+
+  /* SECTION */
+  .section { padding: 24px 32px 0; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .section-title { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .source-badge { padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+  .badge-chrono24 { background: #1a3a5c; color: #5b8dee; }
+  .badge-ebay { background: #1a2e1a; color: #4caf82; }
+  .section-count { color: var(--muted); font-size: 13px; }
+
+  /* CARDS GRID */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+
+  /* WATCH CARD */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: transform 0.15s, border-color 0.15s; cursor: default; display: flex; flex-direction: column; }
+  .card:hover { transform: translateY(-2px); border-color: var(--gold); }
+  .card.honorable { opacity: 0.85; }
+  .card.honorable:hover { opacity: 1; }
+  .card-top { padding: 14px 16px 10px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-brand { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; }
+  .card-title { font-size: 14px; font-weight: 600; line-height: 1.35; margin-top: 2px; }
+  .card-ref { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .deal-badge { flex-shrink: 0; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 700; text-align: center; white-space: nowrap; }
+  .deal-hot { background: rgba(76,175,82,0.15); color: var(--green); border: 1px solid rgba(76,175,82,0.3); }
+  .deal-good { background: rgba(232,192,65,0.12); color: var(--yellow); border: 1px solid rgba(232,192,65,0.3); }
+  .deal-fair { background: rgba(91,141,238,0.12); color: var(--blue); border: 1px solid rgba(91,141,238,0.3); }
+  .deal-market { background: rgba(122,128,153,0.1); color: var(--muted); border: 1px solid var(--border); }
+
+  .card-body { padding: 12px 16px; flex: 1; }
+  .card-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; font-size: 12px; }
+  .card-row-label { color: var(--muted); }
+  .card-row-value { color: var(--text); font-weight: 500; text-align: right; }
+  .price-main { font-size: 18px; font-weight: 700; color: var(--text); }
+  .price-sub { font-size: 11px; color: var(--muted); margin-left: 4px; }
+  .market-val { color: var(--muted); font-size: 12px; text-decoration: line-through; }
+  .stars { color: var(--gold); letter-spacing: 1px; }
+  .stars-empty { color: var(--border); }
+  .tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-right: 4px; }
+  .tag-cert { background: rgba(76,175,82,0.15); color: var(--green); }
+  .tag-nocert { background: rgba(230,92,92,0.1); color: #e08080; }
+  .tag-bp { background: rgba(76,175,82,0.15); color: var(--green); }
+  .risk { font-size: 11px; color: #e08080; margin-top: 6px; padding: 6px 10px; background: rgba(224,92,92,0.07); border-radius: 5px; border-left: 2px solid #e05c5c; }
+
+  .card-footer { padding: 10px 16px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .seller-info { font-size: 11px; color: var(--muted); }
+  .seller-info span { color: var(--text); }
+  .btn-link { padding: 6px 14px; background: var(--gold); color: #000; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background 0.15s; border: none; cursor: pointer; }
+  .btn-link:hover { background: var(--gold2); }
+
+  /* HONORABLE TABLE */
+  .hon-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .hon-table th { text-align: left; padding: 8px 12px; color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+  .hon-table td { padding: 10px 12px; border-bottom: 1px solid rgba(42,47,69,0.5); vertical-align: middle; }
+  .hon-table tr:hover td { background: var(--surface2); }
+  .hon-table tr:last-child td { border-bottom: none; }
+  .hon-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 0; }
+
+  .divider { margin: 32px 32px 0; border: none; border-top: 1px solid var(--border); }
+  .pb32 { padding-bottom: 32px; }
+
+  .no-results { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .header, .filters, .section, .date-tabs, .summary-bar { padding-left: 16px; padding-right: 16px; }
+    .summary-bar { margin: 16px 16px 0; }
+    .divider { margin-left: 16px; margin-right: 16px; }
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>⌚ Watch Deals <span>Dashboard</span></h1>
+    <p>EU &amp; UK market · Men's 39–42mm · Box &amp; Papers · Buy &amp; Resell · Max €12,000</p>
+  </div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-value" id="stat-total">0</div><div class="stat-label">Listings Today</div></div>
+    <div class="stat"><div class="stat-value" id="stat-best">—</div><div class="stat-label">Best Deal</div></div>
+    <div class="stat"><div class="stat-value" id="stat-brands">—</div><div class="stat-label">Brands</div></div>
+    <div class="stat"><div class="stat-value" id="stat-date">—</div><div class="stat-label">Last Updated</div></div>
+  </div>
+</div>
+
+<div class="date-tabs" id="dateTabs"></div>
+
+<div class="filters" id="filterBar">
+  <span class="filter-label">Source</span>
+  <button class="filter-btn active" onclick="setFilter('source','all',this)">All</button>
+  <button class="filter-btn" onclick="setFilter('source','chrono24',this)">Chrono24</button>
+  <button class="filter-btn" onclick="setFilter('source','ebay',this)">eBay UK</button>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Brand</span>
+  <div id="brandFilters" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Min Deal</span>
+  <button class="filter-btn active" onclick="setFilter('deal','all',this)">Any</button>
+  <button class="filter-btn" onclick="setFilter('deal','10',this)">10%+</button>
+  <button class="filter-btn" onclick="setFilter('deal','15',this)">15%+</button>
+  <button class="filter-btn" onclick="setFilter('deal','20',this)">20%+</button>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Sort</span>
+  <select class="filter-sort" onchange="sortCards(this.value)">
+    <option value="deal">Best Deal</option>
+    <option value="price_asc">Price ↑</option>
+    <option value="price_desc">Price ↓</option>
+    <option value="stars">Resale Stars</option>
+  </select>
+</div>
+
+<div id="app"></div>
+
+<script>
+// ─── DATA ────────────────────────────────────────────────────────────────────
+const REPORTS = {
+  "2026-03-04": {
+    summary: "EU and UK pre-owned watch markets continue post-2022 normalisation. Prices are 10–25% below bubble peaks but stabilising — the correction may be nearing a floor, especially for discontinued references. The Rolex Submariner \'Starbucks\' new/unworn at €15,300 is one of the best entry points seen in months. Omega SM Diver 300M supply is plentiful — buyers have pricing power. Tudor Black Bay continues to trade at a steady discount to retail.",
+    sources: "Chrono24 (EU, 345 listings) + eBay UK (~200 listings)",
+    picks: [
+      {
+        id:"c-45062681", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Submariner Date 126610LV \"Starbucks\"", ref:"126610LV",
+        year:"2025", size:"41mm", bp:true, cert:true,
+        price:"$16,595", priceEur:"€15,300", marketVal:"$19,000–22,000",
+        deal:-24, stars:5,
+        seller:"🇷🇴 Romania",
+        risk:"Romanian seller — confirm Chrono24 Buyer Protection is active.",
+        url:"https://www.chrono24.com/rolex/submariner-date--id45062681.htm",
+        outlook:"New/unworn full set well below EU market. Best pick of the day."
+      },
+      {
+        id:"c-43449821", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Oyster Perpetual 41 \"Red Grape\"", ref:"124300",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$8,922", priceEur:"€8,200", marketVal:"$11,500–13,500",
+        deal:-23, stars:5,
+        seller:"🇩🇪 Germany",
+        risk:"Confirm exact dial colour (coral vs candy pink).",
+        url:"https://www.chrono24.com/rolex/oyster-perpetual-41--id43449821.htm",
+        outlook:"Discontinued coloured OP41 — Red Grape is most desired. Certified German seller."
+      },
+      {
+        id:"c-44865996", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Sea-Dweller 4000", ref:"116600",
+        year:"~2015–2017", size:"40mm", bp:true, cert:true,
+        price:"$11,896", priceEur:"€10,950", marketVal:"$13,500–16,000",
+        deal:-13, stars:4,
+        seller:"🇫🇷 France",
+        risk:"Check bracelet wear and service history.",
+        url:"https://www.chrono24.com/rolex/rolex-sea-dweller-4000--id44865996.htm",
+        outlook:"Last SD without cyclops lens — purists prefer it. Discontinued 2017, demand rising."
+      },
+      {
+        id:"c-43543056", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Datejust 41 Steel + White Gold Fluted", ref:"126334",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$12,788", priceEur:"€11,770", marketVal:"$14,200–15,500",
+        deal:-10, stars:4,
+        seller:"🇩🇪 Germany",
+        risk:null,
+        url:"https://www.chrono24.com/rolex/rolex-datejust-41--id43543056.htm",
+        outlook:"Perennial best-seller, extremely liquid. Easy to resell within 10% at any time."
+      },
+      {
+        id:"c-41977886", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M — 007 \"No Time to Die\"", ref:"210.62.42.20.01.001",
+        year:"2021–2022", size:"42mm", bp:true, cert:true,
+        price:"$7,146", priceEur:"€6,575", marketVal:"$7,800–8,500",
+        deal:-8, stars:3,
+        seller:"🇩🇪 Germany",
+        risk:"Confirm all original straps included — full set commands premium.",
+        url:"https://www.chrono24.com/omega/seamaster-diver-300-m-007--id41977886.htm",
+        outlook:"Limited Bond edition, holds value well. Steady demand among collectors."
+      },
+      {
+        id:"c-44294572", source:"chrono24", tier:"top",
+        brand:"IWC", model:"Portofino Chronograph", ref:"Portofino Chrono",
+        year:"Recent", size:"~42mm", bp:true, cert:false,
+        price:"$2,617", priceEur:"€2,410", marketVal:"$3,200–4,000",
+        deal:-18, stars:3,
+        seller:"🇩🇪 Germany",
+        risk:"Private seller — use Chrono24 Buyer Protection.",
+        url:"https://www.chrono24.com/iwc/portofino-chronograph--id44294572.htm",
+        outlook:"Unusual 18% discount — likely motivated seller. Strong brand recognition."
+      },
+      {
+        id:"c-43639474", source:"chrono24", tier:"top",
+        brand:"Tudor", model:"Black Bay Dark Heritage", ref:"79230DK",
+        year:"2021", size:"41mm", bp:true, cert:false,
+        price:"$2,962", priceEur:"€2,725", marketVal:"$3,200–3,600",
+        deal:-12, stars:3,
+        seller:"🇫🇷 France",
+        risk:"Private seller.",
+        url:"https://www.chrono24.com/tudor/black-bay-dark-heritage--id43639474.htm",
+        outlook:"Dark Heritage has a dedicated following. Niche but loyal demand."
+      },
+      {
+        id:"c-45141357", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M", ref:"210.32.42.20.03.001",
+        year:"Recent", size:"42mm", bp:true, cert:false,
+        price:"$4,557", priceEur:"€4,195", marketVal:"$5,300–5,800",
+        deal:-14, stars:3,
+        seller:"🇵🇱 Poland",
+        risk:"Verify Poland seller ships to PT/UK.",
+        url:"https://www.chrono24.com/omega/seamaster-diver-300-m--id45141357.htm",
+        outlook:"Most liquid Omega on secondary market. Strong global demand, easy to flip."
+      },
+      // Honorable mentions — Chrono24
+      {
+        id:"c-43336892", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Datejust 41 Black Dial", ref:"126300",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$8,922", priceEur:"€8,200", marketVal:null,
+        deal:-7, stars:null,
+        seller:"🇮🇹 Italy", risk:null,
+        url:"https://www.chrono24.com/rolex/datejust-41--id43336892.htm", outlook:null
+      },
+      {
+        id:"c-41911740", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Oyster Perpetual 41 Green", ref:"124300",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$10,408", priceEur:"€9,570", marketVal:null,
+        deal:-7, stars:null,
+        seller:"🇮🇹 Italy", risk:null,
+        url:"https://www.chrono24.com/rolex/oyster-perpetual-41--id41911740.htm", outlook:null
+      },
+      {
+        id:"c-44470633", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Datejust II Champagne Dial", ref:"116300",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$8,326", priceEur:"€7,660", marketVal:null,
+        deal:-8, stars:null,
+        seller:"🇩🇪 Germany", risk:null,
+        url:"https://www.chrono24.com/rolex/rolex-datejust-ii--id44470633.htm", outlook:null
+      },
+      {
+        id:"c-43167748", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Submariner \"Kermit\" 2008", ref:"116610LV",
+        year:"2008", size:"40mm", bp:true, cert:true,
+        price:"$13,918", priceEur:"€12,800", marketVal:null,
+        deal:-6, stars:null,
+        seller:"🇩🇪 Germany", risk:null,
+        url:"https://www.chrono24.com/rolex/submariner-kermit--id43167748.htm", outlook:null
+      },
+      {
+        id:"c-44694701", source:"chrono24", tier:"honorable",
+        brand:"Tudor", model:"Black Bay Fifty-Eight 925 Grey Dial", ref:"79010SG",
+        year:"Recent", size:"39mm", bp:true, cert:false,
+        price:"$3,390", priceEur:"€3,120", marketVal:null,
+        deal:-5, stars:null,
+        seller:"🇪🇸 Spain", risk:null,
+        url:"https://www.chrono24.com/tudor/bay-fifty-eight-925-automatic-grey-dial-mens--id44694701.htm", outlook:null
+      },
+      {
+        id:"c-45110193", source:"chrono24", tier:"honorable",
+        brand:"Tudor", model:"Black Bay Fifty-Eight LC-100", ref:"79030N",
+        year:"Recent", size:"39mm", bp:true, cert:false,
+        price:"$3,152", priceEur:"€2,900", marketVal:null,
+        deal:-5, stars:null,
+        seller:"🇩🇪 Germany", risk:null,
+        url:"https://www.chrono24.com/tudor/tudor-black-bay-fifty-eight--id45110193.htm", outlook:null
+      },
+      {
+        id:"c-44541839", source:"chrono24", tier:"honorable",
+        brand:"Omega", model:"Seamaster Diver 300M", ref:"210.30.42.20.01.001",
+        year:"Recent", size:"42mm", bp:true, cert:false,
+        price:"$4,164", priceEur:"€3,830", marketVal:null,
+        deal:-9, stars:null,
+        seller:"🇮🇹 Italy", risk:null,
+        url:"https://www.chrono24.com/omega/seamaster-diver-300-m--id44541839.htm", outlook:null
+      },
+      // eBay Top Picks
+      {
+        id:"e-206103003046", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay 58 Blue — Mint 2023", ref:"79030B",
+        year:"2023", size:"39mm", bp:true, cert:false,
+        price:"£2,150", priceEur:"~€2,560", marketVal:"£2,400–2,700",
+        deal:-13, stars:4,
+        seller:"🇬🇧 Coventry, UK",
+        risk:null,
+        url:"https://www.ebay.co.uk/itm/206103003046",
+        outlook:"Most liquid Tudor on secondary market. Mint, full set. Below typical UK sold prices."
+      },
+      {
+        id:"e-317880308534", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay GMT \"Pepsi\"", ref:"79830RB",
+        year:"2020–2022", size:"41mm", bp:true, cert:false,
+        price:"£2,196", priceEur:"~€2,610", marketVal:"£2,500–2,900",
+        deal:-12, stars:4,
+        seller:"🇬🇧 Ilminster, UK",
+        risk:null,
+        url:"https://www.ebay.co.uk/itm/317880308534",
+        outlook:"Tudor's most desirable GMT. Full UK set. Strong resale at any point."
+      },
+      {
+        id:"e-287153316189", source:"ebay", tier:"top",
+        brand:"IWC", model:"Portofino Automatic", ref:"IW356501",
+        year:"Recent", size:"40mm", bp:true, cert:false,
+        price:"£2,200", priceEur:"~€2,620", marketVal:"£2,700–3,200",
+        deal:-19, stars:3,
+        seller:"🇬🇧 United Kingdom",
+        risk:null,
+        url:"https://www.ebay.co.uk/itm/287153316189",
+        outlook:"Portofino at low end of current UK pricing. Reliable resale to dress-watch buyers."
+      },
+      {
+        id:"e-406729356863", source:"ebay", tier:"top",
+        brand:"Rolex", model:"Submariner Date 2016", ref:"116610LN",
+        year:"2016", size:"40mm", bp:true, cert:false,
+        price:"£8,289", priceEur:"~€9,860", marketVal:"£9,000–10,500",
+        deal:-10, stars:4,
+        seller:"🇬🇧 Liverpool, UK",
+        risk:null,
+        url:"https://www.ebay.co.uk/itm/406729356863",
+        outlook:"Final gen classic 40mm Sub — collectors prefer smaller case. Very liquid."
+      },
+      {
+        id:"e-376889414527", source:"ebay", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M 41mm", ref:"2264.50.00",
+        year:"~2002–2006", size:"41mm", bp:true, cert:false,
+        price:"£2,650", priceEur:"~€3,150", marketVal:"£2,600–3,000",
+        deal:0, stars:3,
+        seller:"🇬🇧 Parkers Jewellers, London",
+        risk:"Pricing is at/near market — better as a wear-and-hold.",
+        url:"https://www.ebay.co.uk/itm/376889414527",
+        outlook:"Solid classic-era Seamaster from a named London jeweller. Co-Axial movement."
+      },
+      // eBay Honorable
+      {
+        id:"e-157597778755", source:"ebay", tier:"honorable",
+        brand:"Tudor", model:"Black Bay 41 2020", ref:"79540",
+        year:"2020", size:"41mm", bp:true, cert:false,
+        price:"£2,095", priceEur:"~€2,490", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇬🇧 London, UK", risk:null,
+        url:"https://www.ebay.co.uk/itm/157597778755", outlook:null
+      },
+      {
+        id:"e-117064146267", source:"ebay", tier:"honorable",
+        brand:"Tudor", model:"Black Bay 58 Black 2020", ref:"79030N",
+        year:"2020", size:"39mm", bp:true, cert:false,
+        price:"£2,252", priceEur:"~€2,680", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇬🇧 Reigate, UK", risk:null,
+        url:"https://www.ebay.co.uk/itm/117064146267", outlook:null
+      },
+      {
+        id:"e-117065625954", source:"ebay", tier:"honorable",
+        brand:"IWC", model:"Aquatimer Chronograph", ref:"174656",
+        year:"Recent", size:"42mm", bp:true, cert:false,
+        price:"£2,500", priceEur:"~€2,975", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇬🇧 Exeter, UK", risk:null,
+        url:"https://www.ebay.co.uk/itm/117065625954", outlook:null
+      },
+      {
+        id:"e-277754230487", source:"ebay", tier:"honorable",
+        brand:"IWC", model:"Pilot Mark XVIII 2017", ref:"IW326501",
+        year:"2017", size:"40mm", bp:true, cert:false,
+        price:"£2,800", priceEur:"~€3,330", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇮🇹 Campobasso, Italy", risk:null,
+        url:"https://www.ebay.co.uk/itm/277754230487", outlook:null
+      },
+      {
+        id:"e-198148993966", source:"ebay", tier:"honorable",
+        brand:"Rolex", model:"Sea-Dweller 2005", ref:"16600",
+        year:"2005", size:"40mm", bp:true, cert:false,
+        price:"£6,589", priceEur:"~€7,840", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇬🇧 Durham, UK", risk:null,
+        url:"https://www.ebay.co.uk/itm/198148993966", outlook:null
+      },
+      {
+        id:"e-336458744337", source:"ebay", tier:"honorable",
+        brand:"Omega", model:"Seamaster Aqua Terra 39mm", ref:"2517.80",
+        year:"Recent", size:"39mm", bp:true, cert:false,
+        price:"£1,975", priceEur:"~€2,350", marketVal:null,
+        deal:null, stars:null,
+        seller:"🇬🇧 Winscombe, UK", risk:null,
+        url:"https://www.ebay.co.uk/itm/336458744337", outlook:null
+      }
+    ]
+  }
+};
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+let currentDate = Object.keys(REPORTS).sort().reverse()[0];
+let filters = { source: 'all', deal: 'all', brand: 'all' };
+let sortBy = 'deal';
+
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
+function dealClass(d) {
+  if (d === null || d === undefined) return 'deal-market';
+  if (d <= -20) return 'deal-hot';
+  if (d <= -10) return 'deal-good';
+  if (d < 0) return 'deal-fair';
+  return 'deal-market';
+}
+function dealLabel(d) {
+  if (d === null || d === undefined || d === 0) return 'At market';
+  return d + '%';
+}
+function stars(n) {
+  if (!n) return '';
+  let s = '';
+  for (let i=0;i<5;i++) s += i < n ? '★' : '☆';
+  return `<span class="stars">${'★'.repeat(n)}</span><span class="stars-empty">${'☆'.repeat(5-n)}</span>`;
+}
+
+// ─── RENDER ──────────────────────────────────────────────────────────────────
+function getBrands(report) {
+  return [...new Set(report.picks.map(p => p.brand))].sort();
+}
+
+function renderDateTabs() {
+  const dates = Object.keys(REPORTS).sort().reverse();
+  document.getElementById('dateTabs').innerHTML = dates.map(d =>
+    `<div class="date-tab ${d===currentDate?'active':''}" onclick="switchDate('${d}')">${d}</div>`
+  ).join('');
+}
+
+function renderBrandFilters(report) {
+  const brands = getBrands(report);
+  document.getElementById('brandFilters').innerHTML =
+    `<button class="filter-btn ${filters.brand==='all'?'active':''}" onclick="setFilter('brand','all',this)">All</button>` +
+    brands.map(b =>
+      `<button class="filter-btn ${filters.brand===b?'active':''}" onclick="setFilter('brand','${b}',this)">${b}</button>`
+    ).join('');
+}
+
+function renderCard(p) {
+  const dc = dealClass(p.deal);
+  return `
+  <div class="card ${p.tier==='honorable'?'honorable':''}">
+    <div class="card-top">
+      <div>
+        <div class="card-brand">${p.brand}</div>
+        <div class="card-title">${p.model}</div>
+        <div class="card-ref">Ref. ${p.ref} · ${p.year} · ${p.size}</div>
+      </div>
+      <div class="deal-badge ${dc}">${dealLabel(p.deal)}</div>
+    </div>
+    <div class="card-body">
+      <div class="card-row">
+        <span class="card-row-label">Asking price</span>
+        <span class="card-row-value"><span class="price-main">${p.price}</span><span class="price-sub">${p.priceEur}</span></span>
+      </div>
+      ${p.marketVal ? `<div class="card-row"><span class="card-row-label">Est. market value</span><span class="card-row-value">${p.marketVal}</span></div>` : ''}
+      ${p.stars ? `<div class="card-row"><span class="card-row-label">Resale outlook</span><span class="card-row-value">${stars(p.stars)}</span></div>` : ''}
+      <div class="card-row">
+        <span class="card-row-label">Box &amp; Papers</span>
+        <span class="card-row-value"><span class="tag tag-bp">${p.bp ? '✓ Full Set' : '✗ No B&P'}</span></span>
+      </div>
+      <div class="card-row">
+        <span class="card-row-label">Certification</span>
+        <span class="card-row-value"><span class="tag ${p.cert?'tag-cert':'tag-nocert'}">${p.cert ? '✓ Certified' : 'Private seller'}</span></span>
+      </div>
+      ${p.outlook ? `<div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5;">${p.outlook}</div>` : ''}
+      ${p.risk ? `<div class="risk">⚠ ${p.risk}</div>` : ''}
+    </div>
+    <div class="card-footer">
+      <div class="seller-info">📍 <span>${p.seller}</span> · <span class="source-badge ${sourceBadgeClass(p.source)}" style="font-size:10px;padding:2px 7px;vertical-align:middle">${sourceLabel(p.source)}</span></div>
+      <a class="btn-link" href="${p.url}" target="_blank">View →</a>
+    </div>
+  </div>`;
+}
+
+function sourceBadgeClass(s) {
+  return s === 'ebay' ? 'badge-ebay' : 'badge-chrono24';
+}
+function sourceLabel(s) {
+  return s === 'ebay' ? 'eBay UK' : 'Chrono24';
+}
+function renderHonorableRow(p) {
+  const srcBadge = `<span class="source-badge ${sourceBadgeClass(p.source)}" style="font-size:10px;padding:2px 7px">${sourceLabel(p.source)}</span>`;
+  return `
+  <tr>
+    <td><strong>${p.brand}</strong></td>
+    <td>${p.model}</td>
+    <td>${p.price}<br><span style="color:var(--muted);font-size:11px">${p.priceEur}</span></td>
+    <td><span class="deal-badge ${dealClass(p.deal)}" style="font-size:11px;padding:2px 7px">${dealLabel(p.deal)}</span></td>
+    <td>${srcBadge}</td>
+    <td>${p.seller}</td>
+    <td><a class="btn-link" href="${p.url}" target="_blank" style="padding:4px 10px;font-size:11px">View →</a></td>
+  </tr>`;
+}
+
+function applyFiltersAndSort(picks) {
+  let list = picks.filter(p => {
+    if (filters.source !== 'all' && p.source !== filters.source) return false;
+    if (filters.brand !== 'all' && p.brand !== filters.brand) return false;
+    if (filters.deal !== 'all' && p.tier === 'top') {
+      const minDeal = parseInt(filters.deal);
+      if (p.deal === null || p.deal >= -minDeal) return false;
+    }
+    return true;
+  });
+  if (sortBy === 'deal') list.sort((a,b) => (a.deal ?? 0) - (b.deal ?? 0));
+  else if (sortBy === 'stars') list.sort((a,b) => (b.stars ?? 0) - (a.stars ?? 0));
+  else if (sortBy === 'price_asc') list.sort((a,b) => extractNum(a.price) - extractNum(b.price));
+  else if (sortBy === 'price_desc') list.sort((a,b) => extractNum(b.price) - extractNum(a.price));
+  return list;
+}
+
+function extractNum(s) {
+  const n = s.replace(/[^0-9.]/g,'');
+  return parseFloat(n) || 0;
+}
+
+function render() {
+  const report = REPORTS[currentDate];
+  renderBrandFilters(report);
+
+  const allFiltered = applyFiltersAndSort(report.picks);
+  const topFiltered = allFiltered.filter(p => p.tier === 'top');
+  const honFiltered = allFiltered.filter(p => p.tier === 'honorable');
+
+  // Stats
+  const bestDeal = Math.min(...report.picks.filter(p=>p.deal<0).map(p=>p.deal));
+  const uniqueBrands = new Set(report.picks.map(p=>p.brand)).size;
+  document.getElementById('stat-total').textContent = report.picks.length;
+  document.getElementById('stat-best').textContent = bestDeal + '%';
+  document.getElementById('stat-brands').textContent = uniqueBrands;
+  document.getElementById('stat-date').textContent = currentDate;
+
+  let html = '';
+
+  // Summary
+  html += `<div class="summary-bar"><strong>📊 Market Summary:</strong> ${report.summary}</div>`;
+
+  // All Top Picks together
+  html += `<div class="section">
+    <div class="section-header">
+      <div class="section-title">Top Picks</div>
+      <span class="section-count">${topFiltered.length} listings</span>
+    </div>
+    ${topFiltered.length ? `<div class="cards">${topFiltered.map(renderCard).join('')}</div>` : '<div class="no-results">No listings match current filters.</div>'}
+  </div>`;
+
+  // All Honorable Mentions together
+  if (honFiltered.length) {
+    html += `<hr class="divider"><div class="section">
+      <div class="section-header">
+        <div class="section-title">Honorable Mentions</div>
+        <span class="section-count">${honFiltered.length} listings</span>
+      </div>
+      <div class="hon-wrap">
+        <table class="hon-table">
+          <thead><tr><th>Brand</th><th>Model</th><th>Price</th><th>Deal</th><th>Source</th><th>Seller</th><th></th></tr></thead>
+          <tbody>${honFiltered.map(renderHonorableRow).join('')}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }
+
+  html += `<div class="pb32"></div>`;
+  document.getElementById('app').innerHTML = html;
+}
+
+// ─── CONTROLS ────────────────────────────────────────────────────────────────
+function setFilter(type, value, btn) {
+  filters[type] = value;
+  // toggle active on sibling buttons in same group
+  const group = btn.parentElement;
+  group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+function sortCards(val) { sortBy = val; render(); }
+function switchDate(d) { currentDate = d; render(); renderDateTabs(); }
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+renderDateTabs();
+render();
+</script>
+</body>
+</html>
