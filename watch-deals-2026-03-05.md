@@ -18,28 +18,7 @@
 
 ---
 
-### 1. 🔥 Tudor Black Bay GMT "Pepsi" 79830RB — Motivated Seller
-
-| Field | Detail |
-|---|---|
-| **Reference** | 79830RB |
-| **Year** | Recent (used) |
-| **Case size** | 41mm |
-| **Box & Papers** | ✅ Full Set |
-| **Certification** | ✅ Trusted Seller |
-| **Asking price** | $3,500 (~€3,220 / ~£2,510) |
-| **Est. market value** | $4,200–4,500 (~€3,865–4,140) |
-| **Deal score** | **~20% below market** |
-| **Seller country** | EU/UK — verify at listing |
-| **Link** | [View on Chrono24](https://www.chrono24.com/tudor/tudor-black-bay-gmt-pepsi--id25318872.htm) |
-
-**Resale outlook:** ⭐⭐⭐⭐⭐ The Black Bay GMT "Pepsi" is Tudor's most functionally desirable model — GMT complication, iconic bezel, 41mm. EU secondary runs €3,800–4,200 for pre-owned full-set examples. At $3,500 from a Trusted Seller, this is the top flip candidate of the day.
-
-**Risk flags:** Confirm condition is Good/Very Good or better. Verify seller ships to PT. Confirm bracelet vs strap configuration.
-
----
-
-### 2. Tudor Black Bay GMT 79830RB — Unworn 2025
+### 1. Tudor Black Bay GMT 79830RB — Unworn 2025
 
 | Field | Detail |
 |---|---|
@@ -60,7 +39,7 @@
 
 ---
 
-### 3. 🔥 Omega Seamaster Planet Ocean Full Set — Germany
+### 2. 🔥 Omega Seamaster Planet Ocean Full Set — Germany
 
 | Field | Detail |
 |---|---|
@@ -81,7 +60,7 @@
 
 ---
 
-### 4. IWC Pilot's Watch Mark XX — 2025 Unworn, Trusted Seller
+### 3. IWC Pilot's Watch Mark XX — 2025 Unworn, Trusted Seller
 
 | Field | Detail |
 |---|---|
@@ -102,7 +81,7 @@
 
 ---
 
-### 5. Breitling Superocean Chronograph II — A13340, 42mm, Box & Papers
+### 4. Breitling Superocean Chronograph II — A13340, 42mm, Box & Papers
 
 | Field | Detail |
 |---|---|
@@ -160,7 +139,73 @@
 
 ---
 
-### 2. IWC Pilot's Mark XVII — IW326501, 41mm, 2015
+### 2. 🔥 Cartier Santos Large WSSA0030 — 2022, 40mm, Box & Papers
+
+| Field | Detail |
+|---|---|
+| **Reference** | WSSA0030 |
+| **Year** | 2022 |
+| **Case size** | 40mm |
+| **Condition** | Pre-owned |
+| **Box & Papers** | ✅ Full Set |
+| **Certification** | ✅ eBay Authenticity Guarantee |
+| **Asking price** | £5,699 (~€6,781) or Best Offer |
+| **Est. market value** | £6,500–£7,500 (~€7,735–€8,925) |
+| **Deal score** | **~15–24% below market** |
+| **Seller** | 🇬🇧 UK |
+| **Link** | [View on eBay UK](https://www.ebay.co.uk/itm/306803527026) |
+
+**Resale outlook:** ⭐⭐⭐⭐⭐ The Santos WSSA0030 is one of Cartier's best-performing secondary models — interchangeable strap/bracelet system, strong EU demand. 2022 full set is a clean Tier 1 asset with real appreciation upside. Cartier has not raised prices in 2026 — pre-increase buying window.
+
+**Risk flags:** Verify large 40mm steel version (not medium/two-tone). Confirm strap/bracelet included.
+
+---
+
+### 3. Panerai Luminor Due 42mm PAM01046 — 2020, Full Box & Papers
+
+| Field | Detail |
+|---|---|
+| **Reference** | PAM01046 |
+| **Year** | 2020 |
+| **Case size** | 42mm |
+| **Condition** | Pre-owned |
+| **Box & Papers** | ✅ Full Set |
+| **Certification** | ✅ eBay Authenticity Guarantee |
+| **Asking price** | £3,795 (~€4,516) or Best Offer |
+| **Est. market value** | £4,500–£5,000 (~€5,355–€5,950) |
+| **Deal score** | **~20% below market** |
+| **Seller** | 🇬🇧 UK |
+| **Link** | [View on eBay UK](https://www.ebay.co.uk/itm/327018621739) |
+
+**Resale outlook:** ⭐⭐⭐⭐ Luminor Due — Panerai's slim dress model, titanium case, excellent enthusiast demand. 2020 production, full set. Strong Tier 2 secondary market with consistent EU buyer interest.
+
+**Risk flags:** Verify titanium case. Confirm strap/bracelet configuration.
+
+---
+
+### 4. Zenith El Primero Chronomaster 2021 — Full Box & Papers
+
+| Field | Detail |
+|---|---|
+| **Reference** | Chronomaster Original |
+| **Year** | 2021 |
+| **Case size** | 38mm |
+| **Condition** | Pre-owned |
+| **Box & Papers** | ✅ Full Set |
+| **Certification** | ✅ eBay Authenticity Guarantee |
+| **Asking price** | £4,000 (~€4,760) |
+| **Est. market value** | £4,800–£5,500 (~€5,712–€6,545) |
+| **Deal score** | **~17–27% below market** |
+| **Seller** | 🇬🇧 UK |
+| **Link** | [View on eBay UK](https://www.ebay.co.uk/itm/326908818122) |
+
+**Resale outlook:** ⭐⭐⭐⭐ El Primero is the legend — 36,000vph column-wheel chronograph, strong collector following. At £4,000 with full set, a genuine Tier 2 bargain. Note: 38mm case is slightly below the 39–42mm target range.
+
+**Risk flags:** 38mm case may not suit all wrists. Confirm exact reference at listing.
+
+---
+
+### 5. IWC Pilot's Mark XVII — IW326501, 41mm, 2015
 
 | Field | Detail |
 |---|---|
@@ -183,7 +228,7 @@
 
 ---
 
-### 3. Tudor Heritage Black Bay 41mm — 79230R Red Bezel, Full Set ⚠️ AUCTION ENDS SUNDAY
+### 6. Tudor Heritage Black Bay 41mm — 79230R Red Bezel, Full Set ⚠️ AUCTION ENDS SUNDAY
 
 | Field | Detail |
 |---|---|
@@ -208,24 +253,37 @@
 
 ## 📋 EBAY UK — HONORABLE MENTIONS
 
-| # | Model | Ref | Price | Location | Link |
+| # | Model | Ref | Price | Deal | Link |
 |---|---|---|---|---|---|
-| 1 | Tudor GMT Black Bay 41mm Jubilee — Box & Papers | M79830RB | £2,176 | 🇬🇧 UK | [View](https://www.ebay.co.uk/itm/317934907018) |
-| 2 | Tudor Black Bay 41mm Steel — Box & Papers | 79730 | £2,190 | 🇬🇧 UK | [View](https://www.ebay.co.uk/itm/358242443073) |
-| 3 | Tudor Black Bay 79230R Burgundy 41mm — Full Set | 79230R | £2,252 | 🇬🇧 UK | [View](https://www.ebay.co.uk/itm/147171945249) |
+| 1 | Grand Seiko SBGM247 GMT 2022 B&P | SBGM247 | £3,897 | ~25% below | [View](https://www.ebay.co.uk/itm/336397301982) |
+| 2 | Omega Seamaster 300m 2018 Immaculate Full B&P | 2254.50 | £2,762 | ~15% below | [View](https://www.ebay.co.uk/itm/188115732123) |
+| 3 | Panerai Luminor Marina PAM00660 2017 B&P | PAM00660 | £3,221 | ~10% below | [View](https://www.ebay.co.uk/itm/168191667206) |
+| 4 | Oris Aquis Date 41.5mm Unworn 2023 B&P | Aquis Date | £1,350 | ~20% below | [View](https://www.ebay.co.uk/itm/147049727551) |
+| 5 | Oris Aquis 41.5mm 2024 B&P | Aquis | £1,325 | ~20% below | [View](https://www.ebay.co.uk/itm/226772943813) |
+| 6 | TAG Heuer Carrera WV211B Calibre 5 39mm B&P | WV211B | £946 | ~30% below | [View](https://www.ebay.co.uk/itm/157673175136) |
+| 7 | Chopard Mille Miglia Chrono 168511 42mm 2010 B&P | 168511 | £2,391 | ~25% below | [View](https://www.ebay.co.uk/itm/177225919151) |
+| 8 | Seiko Prospex MM200 SPB187J1 Full Set | SPB187J1 | £743 | ~25% below | [View](https://www.ebay.co.uk/itm/336456505789) |
+| 9 | Rolex Oyster Perpetual 41 124300 B&P | 124300 | £5,901 | ~10% below | [View](https://www.ebay.co.uk/itm/277754216547) |
+| 10 | Tudor GMT Black Bay 41mm Jubilee B&P | M79830RB | £2,176 | — | [View](https://www.ebay.co.uk/itm/317934907018) |
+| 11 | Tudor Black Bay 41mm Steel B&P | 79730 | £2,190 | — | [View](https://www.ebay.co.uk/itm/358242443073) |
+| 12 | Tudor Black Bay 79230R Burgundy 41mm Full Set | 79230R | £2,252 | — | [View](https://www.ebay.co.uk/itm/147171945249) |
 
 ---
 
 ## 💡 TODAY'S RECOMMENDATION
 
-**Best buy of the day:** The **Omega Seamaster Professional 300m ref 2265.80** (eBay, £2,354) — authenticated, full set, UK seller, 24 watchers. Try Make Offer at £2,100–2,200.
+**Best buy of the day:** The **Omega Seamaster Professional 300m ref 2265.80** (eBay, £2,354) — authenticated, full set, UK seller, 24 watchers. Try Make Offer at £2,100–2,200 first.
 
-**Watch the auction:** Tudor 79230R (eBay item 317940332173) closes **Sunday 17:44**. Set a max bid of £2,100–2,200.
+**Tier 1 standout:** **Cartier Santos WSSA0030 2022** (eBay, £5,699) — modern Santos ~20% below market. Strong Tier 1 asset with pre-increase buying window.
 
-**Quick flip candidate:** IWC Mark XVII at £2,961 — offer £2,700, realistic resale £3,200–3,400 within 4–8 weeks.
+**Watch the auction:** Tudor 79230R (eBay item 317940332173) closes **Sunday 17:44**. Set a max bid of £2,100–2,200. Don't chase above £2,400.
 
-**Chrono24 standout:** Tudor BB GMT "Pepsi" at $3,500 (~20% below market) — verify EU seller and condition.
+**Quick flip candidate:** Panerai PAM01046 at £3,795 — offer £3,500, realistic resale £4,500–5,000 within 4–8 weeks.
+
+**Chrono24 standout:** Tudor BB GMT Pepsi unworn 2025 at $4,861 — near-new, warranty likely still active.
+
+**Value pick (Tier 3):** Grand Seiko SBGM247 GMT at £3,897 (~25% below market) — exceptional GMT entry with strong collector cachet.
 
 ---
 
-*Report generated: 5 March 2026 | Chrono24 (EU search) + eBay UK (verified listings) | Next run: 6 March 2026 at 10:45 AM*
+*Report generated: 5 March 2026 | Chrono24 (EU search) + eBay UK (full sweep: Omega, Tudor, IWC, Breitling, Cartier, Rolex, TAG Heuer, Zenith, Panerai, Grand Seiko, Seiko, Oris, Nomos, Glashütte Original, Chopard) | Next run: 6 March 2026 at 10:45 AM*
