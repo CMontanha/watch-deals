@@ -18,24 +18,24 @@
 
 ---
 
-### 1. Tudor Black Bay GMT 79830RB — Unworn 2025
+### 1. 🔥 Tudor Black Bay GMT 79830RB 2021 — Full Set + Receipt
 
 | Field | Detail |
 |---|---|
 | **Reference** | 79830RB |
-| **Year** | 2025 (August — unworn) |
+| **Year** | 2021 |
 | **Case size** | 41mm |
-| **Box & Papers** | ✅ Full Set |
-| **Certification** | ✅ Trusted Seller |
-| **Asking price** | $4,861 (~€4,470 / ~£3,445) |
-| **Est. market value** | $5,000–5,400 (~€4,600–4,970) |
-| **Deal score** | **~12% below market** |
-| **Seller country** | EU/UK — verify at listing |
-| **Link** | [View on Chrono24](https://www.chrono24.com/tudor/tudor-black-bay-gmt-41mm-79830rb-79830-rb-pepsi-2025-082025--id42998414.htm) |
+| **Box & Papers** | ✅ Original Box, Papers & Goldsmiths Receipt |
+| **Certification** | ❌ Private Seller (Chrono24 Buyer Protection) |
+| **Asking price** | $2,675 (~€2,461 / ~£2,060) |
+| **Est. market value** | $4,000–4,500 (~€3,680–4,140) |
+| **Deal score** | **~35% below market** |
+| **Views** | 553 views in 48 hours |
+| **Link** | [View on Chrono24](https://www.chrono24.com/tudor/black-bay-gmt--id44519655.htm) |
 
-**Resale outlook:** ⭐⭐⭐⭐ Unworn 2025 production. Tudor raised retail ~5.6% in 2026, making this near-new secondary example compelling. Factory warranty likely still active.
+**Resale outlook:** ⭐⭐⭐⭐⭐ The stand-out Chrono24 pick today. BB GMT 79830RB full set with original documentation and retail receipt — complete provenance chain. At $2,675 this is ~35% below the EU secondary market for this reference. 553 views in 48 hours confirms strong buyer interest. Use Chrono24 Buyer Protection escrow for a safe transaction.
 
-**Risk flags:** Confirm EU seller to avoid PT import duties.
+**Risk flags:** Private seller — insist on Chrono24 escrow payment. Confirm EU location for shipping. Condition listed as Good — ask for detailed photos of bezel insert and bracelet.
 
 ---
 
@@ -48,36 +48,36 @@
 | **Case size** | 39.5–42mm (verify ref at listing) |
 | **Box & Papers** | ✅ Full Set |
 | **Certification** | ❌ Private Seller (Germany) |
-| **Asking price** | $4,147 (~€3,810 / ~£3,205) |
+| **Asking price** | $3,961 (~€3,644 / ~£3,050) |
 | **Est. market value** | $4,800–5,500 (~€4,415–5,060) |
 | **Deal score** | **~17% below market** |
 | **Seller country** | 🇩🇪 Germany |
 | **Link** | [View on Chrono24](https://www.chrono24.com/omega/seamaster-planet-ocean--id43670434.htm) |
 
-**Resale outlook:** ⭐⭐⭐⭐ Planet Ocean 600M — ceramic bezel, co-axial master chronometer movement, proven secondary demand. Omega has not raised prices in 2026, so secondary is still normalised — ideal entry window.
+**Resale outlook:** ⭐⭐⭐⭐ Planet Ocean 600M — ceramic bezel, co-axial master chronometer movement, proven secondary demand. Omega has not raised prices in 2026 — ideal entry window.
 
-**Risk flags:** Private seller — use Chrono24 Buyer Protection. Confirm exact reference and case size (some Planet Ocean variants are 43.5mm — outside target range).
+**Risk flags:** Private seller — use Chrono24 Buyer Protection. Confirm exact reference and case size (some Planet Ocean variants are 43.5mm, outside target range).
 
 ---
 
-### 3. IWC Pilot's Watch Mark XX — 2025 Unworn, Trusted Seller
+### 3. IWC Pilot's Watch Mark XX IW328201 — Box & Papers, Trusted Seller
 
 | Field | Detail |
 |---|---|
 | **Reference** | IW328201 |
-| **Year** | 2025 (unworn) |
+| **Year** | Recent |
 | **Case size** | 40mm |
-| **Box & Papers** | ✅ Full Set |
-| **Certification** | ✅ Trusted Seller |
-| **Asking price** | $5,194 (~€4,778 / ~£3,685) |
-| **Est. market value** | $5,500–5,800 (retail) / ~$4,116 (used secondary) |
-| **Deal score** | **~10% below retail** |
-| **Seller country** | EU — verify at listing |
-| **Link** | [View on Chrono24](https://www.chrono24.com/iwc/iwc-2025-new-pilots-watch-mark-xx--id42550381.htm) |
+| **Box & Papers** | ✅ Original Box & Papers |
+| **Certification** | ✅ Trusted Seller (CLOSER co.,ltd — 4.8★, 17,417 reviews) |
+| **Asking price** | $3,941 (~€3,625 / ~£3,035) |
+| **Est. market value** | $4,116–4,500 |
+| **Deal score** | **~10–12% below market** |
+| **Seller country** | International (Trusted Seller — confirm PT shipping) |
+| **Link** | [View on Chrono24](https://www.chrono24.com/iwc/iwc-schaffhausen-iw328201--xx----903558--id44969940.htm) |
 
-**Resale outlook:** ⭐⭐⭐⭐ IWC Pilot line +14.4% in 2025. Mark XX is the core entry — 40mm, clean aviation aesthetic, EasX-CHANGE strap system. Unworn with full set from Trusted Seller — very low risk, real appreciation upside.
+**Resale outlook:** ⭐⭐⭐⭐ Mark XX with full provenance from one of Chrono24's most reputable dealers. IWC secondary +14.4% in 2025 — still appreciating. Clean 40mm pilot with black dial, EasX-CHANGE strap.
 
-**Risk flags:** Confirm EU-based seller to avoid PT import duties.
+**Risk flags:** Confirm shipping to Portugal and any import duties. Seller is an international dealer.
 
 ---
 
@@ -104,11 +104,9 @@
 
 ## 📋 CHRONO24 — HONORABLE MENTIONS
 
-| # | Watch | Est. Price | Deal | Country | Cert | Link |
-|---|---|---|---|---|---|---|
-| 1 | IWC Pilot Mark XX, B&P | ~€3,500–4,200 | ~15–20% | EU | TBC | [Link](https://www.chrono24.com/iwc/iwc-pilots-watch-mark-xx-box--papers--id39907666.htm) |
-| 2 | Rolex Datejust 41 126334 (steel/WG fluted) | ~€11,200–12,000 | ~10% | 🇩🇪 DE | ✅ | [Link](https://www.chrono24.com/rolex/rolex-126334--id43655549.htm) |
-| 3 | IWC Pilot Mark XX IW328204 Blue 2026 | ~€5,500 | At retail | EU | ✅ | [Link](https://www.chrono24.com/iwc/iwc-new-2025-pilot-mark-xx-blue-dial-iw328204--id43499706.htm) |
+| # | Watch | Price | Deal | Cert | Link |
+|---|---|---|---|---|---|
+| 1 | IWC Pilot Mark XX IW328204 Blue — New 2026 | $5,995 (~€5,515) | At retail | ✅ Trusted Seller | [Link](https://www.chrono24.com/iwc/iwc-new-2025-pilot-mark-xx-blue-dial-iw328204--id43499706.htm) |
 
 ---
 
