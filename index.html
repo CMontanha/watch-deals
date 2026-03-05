@@ -169,6 +169,106 @@
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
+  "2026-03-05": {
+    summary: "Notable inflection point: Rolex and Tudor raised retail 5–7% in Jan 2026, creating upward secondary pressure, while Omega, IWC, and Breitling have NOT raised prices — best buying window for pre-owned IWC and Omega. IWC Mark XX trades 29% below US retail with +14.4% secondary growth in 2025. Watchfinder running deep discounts on Tudor and Omega. Best pick of the day: Tudor BB GMT \'Pepsi\' at $3,500 from a Trusted Seller (~-20% below market) and Omega Planet Ocean from Germany at $4,147 (~-17%).",
+    sources: "Chrono24 (EU search index, new IDs) + eBay UK (market intelligence) + Watchfinder alert + PT dealer check",
+    picks: [
+      {
+        id:"c-25318872", source:"chrono24", tier:"top",
+        brand:"Tudor", model:"Black Bay GMT \"Pepsi\" — Motivated Seller", ref:"79830RB",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"$3,500", priceEur:"~€3,220", marketVal:"$4,200–4,500",
+        deal:-20, stars:5,
+        seller:"EU/UK Trusted Seller",
+        risk:"Confirm condition (Good/Very Good+) and that seller ships to PT.",
+        url:"https://www.chrono24.com/tudor/tudor-black-bay-gmt-pepsi--id25318872.htm",
+        outlook:"Top flip candidate of the day. BB GMT Pepsi at -20% below EU secondary — unusually low ask from Trusted Seller. Very liquid, GMT complication, strong global demand."
+      },
+      {
+        id:"c-42998414", source:"chrono24", tier:"top",
+        brand:"Tudor", model:"Black Bay GMT \"Pepsi\" — Unworn Aug 2025", ref:"79830RB",
+        year:"2025", size:"41mm", bp:true, cert:true,
+        price:"$4,861", priceEur:"~€4,470", marketVal:"$5,000–5,400",
+        deal:-12, stars:4,
+        seller:"EU/UK Trusted Seller",
+        risk:"Confirm EU seller (non-EU would trigger PT import duties on secondary)",
+        url:"https://www.chrono24.com/tudor/tudor-black-bay-gmt-41mm-79830rb-79830-rb-pepsi-2025-082025--id42998414.htm",
+        outlook:"Unworn 2025 production. Tudor raised retail 5.6% in 2026 — near-new secondary at €4,470 is competitive. Near-factory warranty, full set."
+      },
+      {
+        id:"c-43670434", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Planet Ocean Full Set", ref:"Planet Ocean 600M",
+        year:"Recent", size:"39.5–42mm", bp:true, cert:false,
+        price:"$4,147", priceEur:"~€3,810", marketVal:"$4,800–5,500",
+        deal:-17, stars:4,
+        seller:"🇩🇪 Germany",
+        risk:"Private seller — use Chrono24 Buyer Protection. Confirm exact ref and case size (some PO variants are 43.5mm, outside range).",
+        url:"https://www.chrono24.com/omega/seamaster-planet-ocean--id43670434.htm",
+        outlook:"Planet Ocean flagship dive watch from German private seller at -17% below market. Omega has NOT raised prices in 2026 — ideal entry window. Co-axial master chronometer, professional spec."
+      },
+      {
+        id:"c-42550381", source:"chrono24", tier:"top",
+        brand:"IWC", model:"Pilot's Watch Mark XX — Unworn 2025", ref:"IW328201",
+        year:"2025", size:"40mm", bp:true, cert:true,
+        price:"$5,194", priceEur:"~€4,778", marketVal:"$5,500–5,800",
+        deal:-10, stars:4,
+        seller:"EU Trusted Seller",
+        risk:"Confirm EU seller country. IWC hasn't raised 2026 retail — but +14.4% secondary trend means buy now.",
+        url:"https://www.chrono24.com/iwc/iwc-2025-new-pilots-watch-mark-xx--id42550381.htm",
+        outlook:"IWC Mark XX is the strongest secondary performer of 2025 (+14.4%). Unworn 2025 at -10% below retail with Trusted Seller. 40mm, clean pilot aesthetic, EasX-CHANGE strap. IWC Tier 1."
+      },
+      {
+        id:"c-39907666", source:"chrono24", tier:"top",
+        brand:"IWC", model:"Pilot's Watch Mark XX IW328206 — Box & Papers", ref:"IW328206",
+        year:"Recent", size:"40mm", bp:true, cert:false,
+        price:"~€3,500–4,400 est.", priceEur:"~€3,500–4,400", marketVal:"$4,116 (secondary avg)",
+        deal:-15, stars:4,
+        seller:"EU (verify at listing)",
+        risk:"Exact price not confirmed today — verify at listing before acting. Confirm EU seller.",
+        url:"https://www.chrono24.com/iwc/iwc-pilots-watch-mark-xx-box--papers--id39907666.htm",
+        outlook:"Mark XX bracelet variant with full provenance. If priced at lower estimate (€3,500), deal score is exceptional (-25% below secondary median). Strong buy if confirmed."
+      },
+      {
+        id:"c-44054442", source:"chrono24", tier:"top",
+        brand:"Breitling", model:"Superocean Chronograph II A13340 — Original B&P", ref:"A13340",
+        year:"~2012–2016", size:"42mm", bp:true, cert:true,
+        price:"~€2,500–2,900 est.", priceEur:"~€2,500–2,900", marketVal:"$3,000–3,500",
+        deal:-13, stars:3,
+        seller:"EU Trusted Seller (verify)",
+        risk:"Exact price not confirmed — verify at listing. Confirm condition and whether service is due (2012–2016 vintage may need service).",
+        url:"https://www.chrono24.com/breitling/superocean-chronograph-42mm-automatik-a13340-original-papiere--box--id44054442.htm",
+        outlook:"42mm Breitling Superocean Chrono with original papers & box from Trusted Seller. Tier 2 brand, stable niche demand. Safe buy at estimated price point."
+      },
+      // Honorable Mentions
+      {
+        id:"c-41477364", source:"chrono24", tier:"honorable",
+        brand:"IWC", model:"Pilot's Watch Mark XX — Original B&P", ref:"Mark XX",
+        year:"Recent", size:"40mm", bp:true, cert:false,
+        price:"~€3,800–4,200 est.", priceEur:"~€3,800–4,200", marketVal:null,
+        deal:-15, stars:null,
+        seller:"EU (verify)", risk:"Confirm price at listing",
+        url:"https://www.chrono24.com/iwc/pilots-watch-mark-xx--id41477364.htm", outlook:null
+      },
+      {
+        id:"c-43655549", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Datejust 41 Steel + White Gold Fluted", ref:"126334",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"~$11,200–12,000 est.", priceEur:"~€10,300–11,040", marketVal:"$12,500–14,000",
+        deal:-12, stars:null,
+        seller:"🇩🇪 Germany (verify)", risk:"Near €12k cap — confirm exact price before acting",
+        url:"https://www.chrono24.com/rolex/rolex-126334--id43655549.htm", outlook:null
+      },
+      {
+        id:"c-43499706", source:"chrono24", tier:"honorable",
+        brand:"IWC", model:"Pilot Mark XX Blue Dial IW328204 — New 2026", ref:"IW328204",
+        year:"2026", size:"40mm", bp:true, cert:true,
+        price:"$5,995", priceEur:"~€5,515", marketVal:null,
+        deal:0, stars:null,
+        seller:"EU Trusted Seller", risk:"Priced at retail — no deal vs. buying new, but certified and immediately available",
+        url:"https://www.chrono24.com/iwc/iwc-new-2025-pilot-mark-xx-blue-dial-iw328204--id43499706.htm", outlook:null
+      }
+    ]
+  },
   "2026-03-04": {
     summary: "EU and UK pre-owned watch markets continue post-2022 normalisation. Prices are 10–25% below bubble peaks but stabilising — the correction may be nearing a floor, especially for discontinued references. The Rolex Submariner \'Starbucks\' new/unworn at €15,300 is one of the best entry points seen in months. Omega SM Diver 300M supply is plentiful — buyers have pricing power. Tudor Black Bay continues to trade at a steady discount to retail.",
     sources: "Chrono24 (EU, 345 listings) + eBay UK (~200 listings)",

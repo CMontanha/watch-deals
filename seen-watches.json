@@ -1,6 +1,6 @@
 {
   "description": "Tracks all watch listings already shown in previous daily reports. The daily search agent reads this file at start, excludes any matching IDs, and appends new IDs after generating the report.",
-  "last_updated": "2026-03-04",
+  "last_updated": "2026-03-05",
   "chrono24_ids": [
     "45062681",
     "43449821",
@@ -16,7 +16,16 @@
     "43167748",
     "44694701",
     "45110193",
-    "44541839"
+    "44541839",
+    "25318872",
+    "42998414",
+    "43670434",
+    "42550381",
+    "39907666",
+    "44054442",
+    "41477364",
+    "43655549",
+    "43499706"
   ],
   "ebay_item_ids": [
     "206103003046",
