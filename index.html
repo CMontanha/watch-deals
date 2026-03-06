@@ -169,6 +169,153 @@
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
+  "2026-03-06": {
+    summary: "Chrono24 + eBay UK sweep (Rolex, Tudor, Omega, IWC, Cartier). Standout: Rolex OP 41 Blue Dial 124300 (2025 card) at -24% from Zeitauktion DE (9,500+ reviews, 4.9★) — discontinued colour dial at €8,806 full set. Rolex Submariner \"Bluesy\" 116613LB Rolesor 2012 at -20% from Munich certified dealer — €9,980. Tudor BB Pro GMT 79470 (2023) at £2,001 on eBay UK with Auth Guarantee (~-22%). IWC Mark XX full set + 8yr warranty at £3,591 (-15%). Cartier Santos Dumont WSSA0022 Dec 2024 at £3,795 (-16%) — essentially new.",
+    sources: "Chrono24 (EU, box & papers, 39–42mm, sorted by discount) + eBay UK (Rolex, Tudor, Omega, IWC, Cartier)",
+    picks: [
+      {
+        id:"c-45171068", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Oyster Perpetual 41 Blue Dial 124300 — 2025 Full Set", ref:"124300",
+        year:"2025", size:"41mm", bp:true, cert:true,
+        price:"$9,586", priceEur:"~€8,806",
+        marketVal:"$12,500–13,500",
+        deal:-24, stars:5,
+        seller:"🇩🇪 Zeitauktion · Professional Dealer · 4.9★ (9,540 reviews)",
+        risk:"Minor surface scratches (Very Good condition). Confirm exact blue dial shade with seller.",
+        url:"https://www.chrono24.com/rolex/oyster-perpetual-blue-dial-stahl-automatik-herren-ref-124300-bp-2025--id45171068.htm",
+        outlook:"Blue OP41 124300 discontinued 2023–24. No new AD stock. 2025-card full set at -24% from Chrono24's most reputable dealer (9,500+ reviews). Delivery to PT by 9–18 Mar. Best Chrono24 pick of the day."
+      },
+      {
+        id:"c-45169357", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Submariner Date 116613LB \"Bluesy\" — Rolesor, 2012, FULLSET", ref:"116613LB",
+        year:"2012", size:"40mm", bp:true, cert:true,
+        price:"€9,980", priceEur:"€9,980",
+        marketVal:"€12,000–13,500",
+        deal:-20, stars:5,
+        seller:"🇩🇪 Uhrenworld München Center GmbH · Professional Dealer · 4.7★ (731 reviews)",
+        risk:"Check Rolesor bracelet stretch (common on 2012-era). Request service history from Munich dealer.",
+        url:"https://www.chrono24.com/rolex/rolex-rolex---submariner-date---fullset-2012---ref-116613lb--id45169357.htm",
+        outlook:"116613LB 'Bluesy' is the original two-tone Sub with ceramic blue bezel — highly collectible. Rolesor Subs have outperformed steel variants in the post-2022 recovery. Certified Munich dealer. Under €12k cap."
+      },
+      {
+        id:"c-45162530", source:"chrono24", tier:"top",
+        brand:"Rolex", model:"Datejust II 116333 Black Arabic Dial — Rolesor, 2013, Full Set", ref:"116333",
+        year:"2013", size:"41mm", bp:true, cert:true,
+        price:"€9,495", priceEur:"€9,495",
+        marketVal:"€10,500–11,000",
+        deal:-11, stars:3,
+        seller:"🇳🇱 Kramer Watches · Franeker · Professional Dealer · 4.7★ (587 reviews)",
+        risk:"Rolesor narrows resale audience vs all-steel. Black Arabic dial is niche but distinctive.",
+        url:"https://www.chrono24.com/rolex/rolex-datejust-ii--id45162530.htm",
+        outlook:"Discontinued DJ II 116333 in Rolesor with black Arabic dial — just serviced in-house 1 March 2026. Full set from Dutch certified dealer. Stable buy-and-hold rather than appreciation play."
+      },
+      {
+        id:"c-45169008", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Datejust 41 126300 — Recent, Full Set", ref:"126300",
+        year:"Recent", size:"41mm", bp:true, cert:false,
+        price:"$9,765", priceEur:"~€8,983", marketVal:null,
+        deal:-9, stars:null,
+        seller:"🇬🇷 Greece", risk:"Private seller — use Chrono24 Buyer Protection",
+        url:"https://www.chrono24.com/rolex/datejust-41-126300--id45169008.htm", outlook:null
+      },
+      {
+        id:"c-45170840", source:"chrono24", tier:"honorable",
+        brand:"Omega", model:"Seamaster Aqua Terra 150M — 38mm, Unworn 2026", ref:"SAT 150M",
+        year:"2026", size:"38mm", bp:true, cert:false,
+        price:"$6,512", priceEur:"~€5,991", marketVal:null,
+        deal:-18, stars:null,
+        seller:"🇩🇪 Germany", risk:"38mm — slightly under 39mm target range. Confirm size preference.",
+        url:"https://www.chrono24.com/omega/seamaster-aqua-terra-150m-38mm-i-full-set-i-unworn-i-2026--id45170840.htm", outlook:null
+      },
+      {
+        id:"e-287172423326", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay Pro GMT 39mm — Ref. 79470, 2023, Box & Papers", ref:"79470",
+        year:"2023", size:"39mm", bp:true, cert:true,
+        price:"£2,001", priceEur:"~€2,380",
+        marketVal:"£2,500–2,700",
+        deal:-22, stars:4,
+        seller:"🇬🇧 UK domestic · eBay Authenticity Guarantee",
+        risk:"Confirm original Tudor papers (not service card). Verify BB Pro 79470 vs earlier Pro variants.",
+        url:"https://www.ebay.co.uk/itm/287172423326",
+        outlook:"BB Pro is Tudor's newest flagship — METAS-certified, retro-inspired, integrated bracelet. 2023 full set at £2,001 is ~22% below UK market. eBay Auth Guarantee covers authentication. Best eBay Tudor pick of the day."
+      },
+      {
+        id:"e-397675414042", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay Red Bezel 79230R — Full Set", ref:"79230R",
+        year:"Recent", size:"41mm", bp:true, cert:true,
+        price:"£2,195", priceEur:"~€2,610",
+        marketVal:"£2,400–2,600",
+        deal:-12, stars:4,
+        seller:"🇬🇧 UK domestic · eBay Authenticity Guarantee",
+        risk:"Verify MT5 movement (vs older ETA). Confirm full box contents.",
+        url:"https://www.ebay.co.uk/itm/397675414042",
+        outlook:"Red Bezel BB41 is the signature Tudor reference — widest buyer base, most liquid BB variant. Full set at £2,195 with Auth Guarantee. Clean, low-risk buy-and-hold or 4–6 week flip."
+      },
+      {
+        id:"e-397678760621", source:"ebay", tier:"top",
+        brand:"IWC", model:"Pilot's Watch Mark XX IW3282-01 — Full Set + 8yr Warranty", ref:"IW328201",
+        year:"Recent (2022+)", size:"40mm", bp:true, cert:true,
+        price:"£3,591", priceEur:"~€4,270",
+        marketVal:"£4,200–4,500",
+        deal:-15, stars:4,
+        seller:"🇬🇧 UK domestic · eBay Authenticity Guarantee",
+        risk:"Confirm IW328201 (black) vs IW328204 (blue). Verify 8yr warranty card is valid/active.",
+        url:"https://www.ebay.co.uk/itm/397678760621",
+        outlook:"Mark XX with full 8-year IWC warranty remaining — major secondary market selling advantage. IWC secondary up +14% in 2025. At -15% below retail this is solid value for a current-generation Tier 1 pilot watch."
+      },
+      {
+        id:"e-168170839440", source:"ebay", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M 41mm — 2012, Box & Papers", ref:"21230412001002",
+        year:"2012", size:"41mm", bp:true, cert:true,
+        price:"£3,095", priceEur:"~€3,680",
+        marketVal:"£3,400–3,700",
+        deal:-11, stars:3,
+        seller:"🇬🇧 UK domestic · eBay Authenticity Guarantee",
+        risk:"Verify condition and confirm movement running correctly. Check bracelet clasp.",
+        url:"https://www.ebay.co.uk/itm/168170839440",
+        outlook:"Seamaster Diver 300M is Omega's most liquid reference globally. Full set with Auth Guarantee at £3,095 — reliable 4–6 week resale. Dependable hold."
+      },
+      {
+        id:"e-286991442546", source:"ebay", tier:"top",
+        brand:"Cartier", model:"Santos Dumont WSSA0022 — December 2024, Box & Papers", ref:"WSSA0022",
+        year:"2024", size:"31.4×41.6mm", bp:true, cert:true,
+        price:"£3,795", priceEur:"~€4,514",
+        marketVal:"£4,500–4,800",
+        deal:-16, stars:4,
+        seller:"🇬🇧 UK domestic · eBay Authenticity Guarantee",
+        risk:"WSSA0022 is the slim dress Santos Dumont (rectangular), NOT the larger sports Santos WSSA0030. Verify style/size preference before buying.",
+        url:"https://www.ebay.co.uk/itm/286991442546",
+        outlook:"December 2024 Cartier Santos Dumont — practically new. Cartier has exceptional resale liquidity. Auth Guarantee. At -16% below market this is strong value for a near-mint Tier 1 dress piece."
+      },
+      {
+        id:"e-236583181613", source:"ebay", tier:"honorable",
+        brand:"IWC", model:"Pilot Mark XVI IW325501 2007 — Box & Papers", ref:"IW325501",
+        year:"2007", size:"39mm", bp:true, cert:false,
+        price:"£2,699", priceEur:"~€3,211", marketVal:"£3,000–3,400",
+        deal:-13, stars:null,
+        seller:"🇬🇧 UK · Auth Guarantee", risk:"Discontinued — less liquid than current Mark XX. Check leather strap condition.",
+        url:"https://www.ebay.co.uk/itm/236583181613", outlook:null
+      },
+      {
+        id:"e-117044151959", source:"ebay", tier:"honorable",
+        brand:"Omega", model:"Seamaster Professional 300m 2531.80.00 2006 — Box & Papers", ref:"2531.80.00",
+        year:"2006", size:"41mm", bp:true, cert:false,
+        price:"£3,191", priceEur:"~€3,797", marketVal:"£3,400–3,700",
+        deal:-10, stars:null,
+        seller:"🇬🇧 UK · Auth Guarantee", risk:"Pre-Co-Axial (2531 series). Check service history.",
+        url:"https://www.ebay.co.uk/itm/117044151959", outlook:null
+      },
+      {
+        id:"e-168197462880", source:"ebay", tier:"honorable",
+        brand:"Tudor", model:"Black Bay 54 79000N — Complete Set (auction, 5d)", ref:"79000N",
+        year:"Recent", size:"39mm", bp:true, cert:false,
+        price:"£2,394", priceEur:"~€2,848", marketVal:"£2,600–2,900",
+        deal:-10, stars:null,
+        seller:"🇬🇧 UK · Auth Guarantee · AUCTION 5 days left", risk:"Auction — final price uncertain. Set max bid £2,400–2,500.",
+        url:"https://www.ebay.co.uk/itm/168197462880", outlook:null
+      }
+    ]
+  },
   "2026-03-05": {
     summary: "Full brand sweep today: Omega, Tudor, IWC, Breitling, Cartier, Rolex, TAG Heuer, Zenith, Panerai, Grand Seiko, Seiko, Oris, Chopard, Glashütte Original. Standout: Cartier Santos WSSA0030 2022 at £5,699 (~20% below market) — top Tier 1 asset. Omega Seamaster 300m wave-dial full set at £2,354 with eBay Auth Guarantee (24 watchers). Panerai PAM01046 at £3,795 (~20% below). Tudor BB 79230R AUCTION closes Sunday at £2,048. Zenith El Primero full set at £4,000 (~20% below). Grand Seiko SBGM247 GMT at £3,897 (~25% below — Tier 3 standout).",
     sources: "Chrono24 (EU search) + eBay UK (full brand sweep — 6 top picks, 12 honorable mentions)",
