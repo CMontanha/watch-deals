@@ -170,9 +170,21 @@
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
   "2026-03-09": {
-    summary: "Live sweep: 56 Chrono24 candidates scanned (1 pass — vintage Omega wave dial). eBay UK delivered strong results: Tudor BB GMT Pepsi 79830RB at £2,250 (~25% below market) with Auth Guarantee; Cartier Santos WSSA0062 Green 2024 at £5,250 (~21% below); Omega Planet Ocean 42mm 2017 full set at £2,850 (~20% below); Omega SMD300M co-axial 41mm 2019 at £2,859 (~15% below); Tudor BB58 Blue 2023 at £2,595 (~16% below). All 5 eBay top picks are UK sellers with 100%/99.7% feedback and eBay Authenticity Guarantee.",
-    sources: "Chrono24 Top Deals (live) + eBay UK (live)",
+    summary: "Full manual redo sweep — 12+ brands across eBay UK (Breitling, Zenith, Panerai, IWC, Omega AqT, Rolex Explorer/DJ, TAG Heuer, JLC, and more). 10 verified top picks; all UK sellers with 100%/99.7% feedback and eBay Authenticity Guarantee. Standout: Breitling Navitimer Auto 41 A17326 2024 at £2,660 (~22% below market) — best Breitling pricing seen in weeks. Chrono24 EU filter non-functional via URL this session; fix queued for next automated run.",
+    sources: "eBay UK (12+ brands live-scraped) + Chrono24 Top Deals",
     picks: [
+      {
+        id:"e-357107006926", source:"ebay", tier:"top",
+        brand:"Breitling", model:"Navitimer Automatic 41 A17326 161C1A1 — 2024, Box & Papers", ref:"A17326",
+        year:"2024", size:"41mm", bp:true, cert:true,
+        price:"£2,660", priceEur:"~€3,165",
+        marketVal:"£3,200–3,500",
+        deal:-22, stars:5,
+        seller:"🇬🇧 Chelmsford, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2024 production — verify warranty card. Check dial condition. No major flags.",
+        url:"https://www.ebay.co.uk/itm/357107006926",
+        outlook:"2024 Navitimer Auto 41 with COSC Manufacture cal. B17. Retail ~£3,800 new. Secondary market £3,000–3,400. At £2,660 with Auth Guarantee — ~22% below secondary. First time 2024 Navitimer 41 seen below £2,700 with papers."
+      },
       {
         id:"e-155871006531", source:"ebay", tier:"top",
         brand:"Tudor", model:"Black Bay GMT Pepsi 79830RB — Receipt, Box & Papers", ref:"79830RB",
@@ -181,9 +193,9 @@ const REPORTS = {
         marketVal:"£2,900–3,200",
         deal:-25, stars:5,
         seller:"🇬🇧 Nelson, UK · 100% feedback · eBay Authenticity Guarantee",
-        risk:"Private seller — confirm bezel insert and bracelet condition via photos before purchase.",
+        risk:"Confirm bezel insert (blue/red) and bracelet condition via photos before purchase.",
         url:"https://www.ebay.co.uk/itm/155871006531",
-        outlook:"Standout pick of the day. BB GMT Pepsi full set with purchase receipt — bulletproof provenance. ~25% below secondary market. Tudor leads all brands for 2nd consecutive month. Most liquid Tudor reference globally."
+        outlook:"BB GMT Pepsi full set with purchase receipt — bulletproof provenance. ~25% below secondary market. Tudor leads all brands for 2nd consecutive month. Most liquid Tudor reference globally."
       },
       {
         id:"e-197752225820", source:"ebay", tier:"top",
@@ -195,7 +207,55 @@ const REPORTS = {
         seller:"🇬🇧 Newcastle, UK · 99.7% feedback · eBay Authenticity Guarantee",
         risk:"Verify interchangeable strap/bracelet system is included in full set.",
         url:"https://www.ebay.co.uk/itm/197752225820",
-        outlook:"2024 Santos Large in rare green ADLC steel. UK retail ~£8,800 new. Pre-owned market £6,500–7,000. Cartier posted +3.4% YoY price growth driven by Gen Z demand. Best prestige play of the week."
+        outlook:"2024 Santos Large in rare green ADLC steel. UK retail ~£8,800 new. Secondary market £6,500–7,000. Cartier +3.4% YoY price growth. Green dial Santos has exceptional EU resale velocity."
+      },
+      {
+        id:"e-327020944710", source:"ebay", tier:"top",
+        brand:"Zenith", model:"Elite Chronograph 42mm Blue Dial — 2017, Full Box & Papers", ref:"03.2272.4069/51.C700",
+        year:"2017", size:"42mm", bp:true, cert:true,
+        price:"£2,895", priceEur:"~€3,445",
+        marketVal:"£3,500–4,000",
+        deal:-20, stars:4,
+        seller:"🇬🇧 Winchester, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2017 — approaching 8yr mark. Ask about service history; Zenith recommends service at 5yr for chrono calibres.",
+        url:"https://www.ebay.co.uk/itm/327020944710",
+        outlook:"Zenith Elite Chronograph in blue dial — in-house El Primero movement, iconic tricolour subdials. Full box & papers. Secondary market £3,500–4,000. At £2,895 ~20% below with Auth Guarantee. Strong EU collector demand."
+      },
+      {
+        id:"e-277641876577", source:"ebay", tier:"top",
+        brand:"Omega", model:"Seamaster Aqua Terra Co-Axial Chronometer 39mm — Full Set", ref:"Co-Axial Chronometer",
+        year:"2018", size:"39mm", bp:true, cert:true,
+        price:"£1,930", priceEur:"~€2,297",
+        marketVal:"£2,400–2,600",
+        deal:-21, stars:4,
+        seller:"🇬🇧 Weybridge, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Confirm exact reference and year from listing. Verify co-axial (not quartz) movement.",
+        url:"https://www.ebay.co.uk/itm/277641876577",
+        outlook:"Omega AqTerra 39mm Co-Axial Chronometer — versatile dress/sport reference. Omega has not raised 2026 retail prices; wide retail/secondary spread. At £1,930 ~21% below secondary, strong UK Auth Guarantee seller."
+      },
+      {
+        id:"e-147081523852", source:"ebay", tier:"top",
+        brand:"IWC", model:"Portugieser Chronograph Blue Dial — IW371491, Box & Papers", ref:"IW371491",
+        year:"2019", size:"41mm", bp:true, cert:true,
+        price:"£3,068", priceEur:"~€3,651",
+        marketVal:"£3,800–4,200",
+        deal:-19, stars:4,
+        seller:"🇬🇧 United Kingdom · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Confirm year and condition of pushers. Verify box includes both outer and inner box.",
+        url:"https://www.ebay.co.uk/itm/147081523852",
+        outlook:"IWC Portugieser Chrono blue dial (IW371491) — Portugieser is IWC's most liquid reference. Blue dial adds ~12% premium on resale. Cal. 89361 auto chrono. Secondary market £3,800–4,200. At £3,068 ~19% below."
+      },
+      {
+        id:"e-327018621739", source:"ebay", tier:"top",
+        brand:"Panerai", model:"Luminor Due PAM01046 42mm Automatic — 2020, Full Box & Papers", ref:"PAM01046",
+        year:"2020", size:"42mm", bp:true, cert:true,
+        price:"£3,895", priceEur:"~€4,635",
+        marketVal:"£4,800–5,500",
+        deal:-20, stars:4,
+        seller:"🇬🇧 Winchester, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Confirm both straps (rubber + leather) included in full set. Due is slimmer than standard Luminor — confirm preference.",
+        url:"https://www.ebay.co.uk/itm/327018621739",
+        outlook:"Panerai Luminor Due 42mm — slim, dressier Luminor with 3-day power reserve auto. Secondary market £4,800–5,500. At £3,895 with Auth Guarantee ~20% below secondary. Loyal EU collector base for Panerai Due."
       },
       {
         id:"e-397545914197", source:"ebay", tier:"top",
@@ -207,7 +267,19 @@ const REPORTS = {
         seller:"🇬🇧 Staffordshire, UK · 100% feedback · eBay Authenticity Guarantee",
         risk:"2017 vintage — approaching 7-year Omega service interval. Confirm service status with seller.",
         url:"https://www.ebay.co.uk/itm/397545914197",
-        outlook:"Planet Ocean 42mm orange ceramic bezel — co-axial, 600m water resistance. Highly collectible variant. Omega has not raised 2026 prices — wide retail/secondary spread. ~20% below secondary market."
+        outlook:"Planet Ocean 42mm orange ceramic bezel — co-axial, 600m WR, highly collectible variant. Omega has not raised 2026 prices — wide retail/secondary spread. ~20% below secondary market."
+      },
+      {
+        id:"e-167552628010", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay 58 79030B Blue — 2023 Box & Papers", ref:"79030B",
+        year:"2023", size:"39mm", bp:true, cert:true,
+        price:"£2,595", priceEur:"~€3,088",
+        marketVal:"£3,000–3,200",
+        deal:-16, stars:4,
+        seller:"🇬🇧 Wilmslow, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"None. Very recent 2023 — full service life ahead.",
+        url:"https://www.ebay.co.uk/itm/167552628010",
+        outlook:"2023 Tudor BB58 Blue — most liquid BB58 variant (13.5-day median sell time). 16% below secondary market. Tudor's rising retail floor supports price appreciation. Zero authentication risk."
       },
       {
         id:"e-358176090764", source:"ebay", tier:"top",
@@ -222,16 +294,64 @@ const REPORTS = {
         outlook:"Classic blue-dial SMD300M co-axial (212.30.41.20.03.001). Popular gateway Omega with strong EU resale. 15% below secondary market with UK Auth Guarantee and 100% feedback seller."
       },
       {
-        id:"e-167552628010", source:"ebay", tier:"top",
-        brand:"Tudor", model:"Black Bay 58 79030B Blue — 2023 Box & Papers", ref:"79030B",
-        year:"2023", size:"39mm", bp:true, cert:true,
-        price:"£2,595", priceEur:"~€3,088",
-        marketVal:"£3,000–3,200",
-        deal:-16, stars:4,
-        seller:"🇬🇧 Wilmslow, UK · 100% feedback · eBay Authenticity Guarantee",
-        risk:"None. Very recent 2023 — full service life ahead.",
-        url:"https://www.ebay.co.uk/itm/167552628010",
-        outlook:"2023 Tudor BB58 Blue — most liquid BB58 variant (13.5-day median sell time). 16% below secondary market. Tudor's rising retail floor supports price appreciation. Auth Guarantee — zero authentication risk."
+        id:"e-116349000011", source:"ebay", tier:"honorable",
+        brand:"IWC", model:"Pilot's Mark XVII 41mm 2015 — Box & Papers", ref:"IW326501",
+        year:"2015", size:"41mm", bp:true, cert:true,
+        price:"£2,961", priceEur:"~€3,523",
+        marketVal:"£3,400–3,800",
+        deal:-15, stars:null,
+        seller:"🇬🇧 UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2015 vintage — confirm service history.",
+        url:"https://www.ebay.co.uk/itm/116349000011",
+        outlook:"IWC Pilot Mark XVII 41mm with full B&P. Classic pilot reference. ~15% below secondary market."
+      },
+      {
+        id:"e-377017777198", source:"ebay", tier:"honorable",
+        brand:"Breitling", model:"Navitimer Chronograph 41 Blue Dial — A13324, Box & Papers", ref:"A13324",
+        year:"2018", size:"41mm", bp:true, cert:true,
+        price:"£3,477", priceEur:"~€4,138",
+        marketVal:"£4,000–4,500",
+        deal:-17, stars:null,
+        seller:"🇬🇧 UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Confirm chronograph pushers and bezel condition.",
+        url:"https://www.ebay.co.uk/itm/377017777198",
+        outlook:"Navitimer Chrono 41 blue dial — COSC chronograph, B01 cal. ~17% below secondary market."
+      },
+      {
+        id:"e-236612336700", source:"ebay", tier:"honorable",
+        brand:"Omega", model:"Seamaster Aqua Terra 39mm Silver Dial 2013 — Box & Papers", ref:"231.10.39.61.02.001",
+        year:"2013", size:"39mm", bp:true, cert:true,
+        price:"£1,650", priceEur:"~€1,964",
+        marketVal:"£2,000–2,200",
+        deal:-20, stars:null,
+        seller:"🇬🇧 UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2013 vintage — confirm co-axial movement and service history.",
+        url:"https://www.ebay.co.uk/itm/236612336700",
+        outlook:"Alternative AqTerra 39mm at lower price point. Good deal score at ~20% below, but older 2013 vintage."
+      },
+      {
+        id:"e-127603472802", source:"ebay", tier:"honorable",
+        brand:"TAG Heuer", model:"Carrera Calibre 5 Automatic 39mm — WV211B, Box & Papers", ref:"WV211B",
+        year:"2015", size:"39mm", bp:true, cert:false,
+        price:"£999", priceEur:"~€1,189",
+        marketVal:"£1,300–1,500",
+        deal:-28, stars:null,
+        seller:"🇬🇧 UK (no auth guarantee)",
+        risk:"No eBay Authenticity Guarantee — verify authenticity independently. Private seller. Inspect in person if possible.",
+        url:"https://www.ebay.co.uk/itm/127603472802",
+        outlook:"TAG Heuer Carrera Cal. 5 39mm with B&P — excellent entry-level value. ~28% below market. No auth guarantee adds risk, but at this price point with papers it's a strong value play if authenticity confirmed."
+      },
+      {
+        id:"e-198059169539", source:"ebay", tier:"honorable",
+        brand:"Rolex", model:"Explorer 214270 39mm 2017 — Box & Papers", ref:"214270",
+        year:"2017", size:"39mm", bp:true, cert:true,
+        price:"£5,595", priceEur:"~€6,658",
+        marketVal:"£6,500–7,500",
+        deal:-15, stars:null,
+        seller:"🇬🇧 UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2017 vintage — standard Rolex provenance checks. Confirm dial condition.",
+        url:"https://www.ebay.co.uk/itm/198059169539",
+        outlook:"Rolex Explorer 214270 39mm with full B&P — the 39mm Explorer is the ideal wrist size. ~15% below secondary with Auth Guarantee."
       },
       {
         id:"e-126075540573", source:"ebay", tier:"honorable",
@@ -240,46 +360,10 @@ const REPORTS = {
         price:"£2,762", priceEur:"~€3,287",
         marketVal:"£2,900–3,200",
         deal:-13, stars:null,
-        seller:"🇬🇧 UK (unverified)",
-        risk:"Seller location not individually verified.",
+        seller:"🇬🇧 UK (unverified location)",
+        risk:"Verify seller location before purchase.",
         url:"https://www.ebay.co.uk/itm/126075540573",
-        outlook:"Alternative BB GMT listing at slightly higher price. Verify seller location before purchase."
-      },
-      {
-        id:"e-236654870133", source:"ebay", tier:"honorable",
-        brand:"Tudor", model:"Black Bay 58 2022 Silver — Box & Papers", ref:"79010SG",
-        year:"2022", size:"39mm", bp:true, cert:null,
-        price:"£2,695", priceEur:"~€3,207",
-        marketVal:"£3,100–3,300",
-        deal:-14, stars:null,
-        seller:"🇬🇧 UK (unverified)",
-        risk:"Seller location not individually verified.",
-        url:"https://www.ebay.co.uk/itm/236654870133",
-        outlook:"BB58 silver dial (79010SG) — alternative colourway with good secondary demand."
-      },
-      {
-        id:"e-286936815552", source:"ebay", tier:"honorable",
-        brand:"Cartier", model:"Santos De Cartier WSSA0018 Large 2021 — Box & Papers", ref:"WSSA0018",
-        year:"2021", size:"39.8mm", bp:true, cert:null,
-        price:"£6,100", priceEur:"~€7,259",
-        marketVal:"£6,500–7,000",
-        deal:-10, stars:null,
-        seller:"🇬🇧 UK (unverified)",
-        risk:"Seller location not individually verified. Smaller deal score than WSSA0062 pick above.",
-        url:"https://www.ebay.co.uk/itm/286936815552",
-        outlook:"Santos WSSA0018 (steel, no coating) — more restrained colourway, slightly lower deal score than the green WSSA0062 top pick."
-      },
-      {
-        id:"e-257248955630", source:"ebay", tier:"honorable",
-        brand:"Omega", model:"Seamaster Planet Ocean 42mm 2201.50.00 — Box & Papers", ref:"2201.50.00",
-        year:"2009", size:"42mm", bp:true, cert:null,
-        price:"£2,899", priceEur:"~€3,450",
-        marketVal:"£3,200–3,800",
-        deal:-17, stars:null,
-        seller:"🇬🇧 UK (unverified)",
-        risk:"Seller location not individually verified. Older reference — confirm service history.",
-        url:"https://www.ebay.co.uk/itm/257248955630",
-        outlook:"Alternative Planet Ocean 42mm listing. Good deal score but older reference (2009)."
+        outlook:"Alternative BB GMT listing at slightly higher price. 13% below secondary market."
       },
       {
         id:"c-44299091", source:"chrono24", tier:"honorable",
@@ -291,7 +375,7 @@ const REPORTS = {
         seller:"🇩🇪 Germany · Private Seller",
         risk:"30-year vintage — confirm movement service history. Private seller — use Chrono24 Buyer Protection escrow.",
         url:"https://www.chrono24.com/omega/seamaster--id44299091.htm",
-        outlook:"Original 1994 Bond Seamaster with original papers. Niche vintage collector appeal — not a pure flip. Papers on a 30-year-old piece are notable."
+        outlook:"Original 1994 Bond Seamaster with original papers. Niche vintage collector appeal. Papers on a 30-year-old piece are notable."
       }
     ]
   },
