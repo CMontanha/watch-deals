@@ -169,6 +169,137 @@
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
+  "2026-03-09": {
+    summary: "Live sweep: 56 Chrono24 candidates scanned (1 pass — vintage Omega wave dial). eBay UK delivered strong results: Tudor BB GMT Pepsi 79830RB at £2,250 (~25% below market) with Auth Guarantee; Cartier Santos WSSA0062 Green 2024 at £5,250 (~21% below); Omega Planet Ocean 42mm 2017 full set at £2,850 (~20% below); Omega SMD300M co-axial 41mm 2019 at £2,859 (~15% below); Tudor BB58 Blue 2023 at £2,595 (~16% below). All 5 eBay top picks are UK sellers with 100%/99.7% feedback and eBay Authenticity Guarantee.",
+    sources: "Chrono24 Top Deals (live) + eBay UK (live)",
+    picks: [
+      {
+        id:"e-155871006531", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay GMT Pepsi 79830RB — Receipt, Box & Papers", ref:"79830RB",
+        year:"2021", size:"41mm", bp:true, cert:true,
+        price:"£2,250", priceEur:"~€2,678",
+        marketVal:"£2,900–3,200",
+        deal:-25, stars:5,
+        seller:"🇬🇧 Nelson, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Private seller — confirm bezel insert and bracelet condition via photos before purchase.",
+        url:"https://www.ebay.co.uk/itm/155871006531",
+        outlook:"Standout pick of the day. BB GMT Pepsi full set with purchase receipt — bulletproof provenance. ~25% below secondary market. Tudor leads all brands for 2nd consecutive month. Most liquid Tudor reference globally."
+      },
+      {
+        id:"e-197752225820", source:"ebay", tier:"top",
+        brand:"Cartier", model:"Santos De Cartier WSSA0062 Green Dial — 2024", ref:"WSSA0062",
+        year:"2024", size:"39.8mm", bp:true, cert:true,
+        price:"£5,250", priceEur:"~€6,248",
+        marketVal:"£6,500–7,000",
+        deal:-21, stars:5,
+        seller:"🇬🇧 Newcastle, UK · 99.7% feedback · eBay Authenticity Guarantee",
+        risk:"Verify interchangeable strap/bracelet system is included in full set.",
+        url:"https://www.ebay.co.uk/itm/197752225820",
+        outlook:"2024 Santos Large in rare green ADLC steel. UK retail ~£8,800 new. Pre-owned market £6,500–7,000. Cartier posted +3.4% YoY price growth driven by Gen Z demand. Best prestige play of the week."
+      },
+      {
+        id:"e-397545914197", source:"ebay", tier:"top",
+        brand:"Omega", model:"Seamaster Planet Ocean 42mm Orange — 2017 Full Set", ref:"Planet Ocean 600M Orange",
+        year:"2017", size:"42mm", bp:true, cert:true,
+        price:"£2,850", priceEur:"~€3,392",
+        marketVal:"£3,500–4,000",
+        deal:-20, stars:4,
+        seller:"🇬🇧 Staffordshire, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"2017 vintage — approaching 7-year Omega service interval. Confirm service status with seller.",
+        url:"https://www.ebay.co.uk/itm/397545914197",
+        outlook:"Planet Ocean 42mm orange ceramic bezel — co-axial, 600m water resistance. Highly collectible variant. Omega has not raised 2026 prices — wide retail/secondary spread. ~20% below secondary market."
+      },
+      {
+        id:"e-358176090764", source:"ebay", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M Co-Axial 41mm — 2019 B&P", ref:"212.30.41.20.03.001",
+        year:"2019", size:"41mm", bp:true, cert:true,
+        price:"£2,859", priceEur:"~€3,402",
+        marketVal:"£3,200–3,600",
+        deal:-15, stars:4,
+        seller:"🇬🇧 Nottingham, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"Confirm rubber strap condition. No service flag at 2019 vintage.",
+        url:"https://www.ebay.co.uk/itm/358176090764",
+        outlook:"Classic blue-dial SMD300M co-axial (212.30.41.20.03.001). Popular gateway Omega with strong EU resale. 15% below secondary market with UK Auth Guarantee and 100% feedback seller."
+      },
+      {
+        id:"e-167552628010", source:"ebay", tier:"top",
+        brand:"Tudor", model:"Black Bay 58 79030B Blue — 2023 Box & Papers", ref:"79030B",
+        year:"2023", size:"39mm", bp:true, cert:true,
+        price:"£2,595", priceEur:"~€3,088",
+        marketVal:"£3,000–3,200",
+        deal:-16, stars:4,
+        seller:"🇬🇧 Wilmslow, UK · 100% feedback · eBay Authenticity Guarantee",
+        risk:"None. Very recent 2023 — full service life ahead.",
+        url:"https://www.ebay.co.uk/itm/167552628010",
+        outlook:"2023 Tudor BB58 Blue — most liquid BB58 variant (13.5-day median sell time). 16% below secondary market. Tudor's rising retail floor supports price appreciation. Auth Guarantee — zero authentication risk."
+      },
+      {
+        id:"e-126075540573", source:"ebay", tier:"honorable",
+        brand:"Tudor", model:"Black Bay GMT 2021 — Box & Papers", ref:"79830RB",
+        year:"2021", size:"41mm", bp:true, cert:null,
+        price:"£2,762", priceEur:"~€3,287",
+        marketVal:"£2,900–3,200",
+        deal:-13, stars:null,
+        seller:"🇬🇧 UK (unverified)",
+        risk:"Seller location not individually verified.",
+        url:"https://www.ebay.co.uk/itm/126075540573",
+        outlook:"Alternative BB GMT listing at slightly higher price. Verify seller location before purchase."
+      },
+      {
+        id:"e-236654870133", source:"ebay", tier:"honorable",
+        brand:"Tudor", model:"Black Bay 58 2022 Silver — Box & Papers", ref:"79010SG",
+        year:"2022", size:"39mm", bp:true, cert:null,
+        price:"£2,695", priceEur:"~€3,207",
+        marketVal:"£3,100–3,300",
+        deal:-14, stars:null,
+        seller:"🇬🇧 UK (unverified)",
+        risk:"Seller location not individually verified.",
+        url:"https://www.ebay.co.uk/itm/236654870133",
+        outlook:"BB58 silver dial (79010SG) — alternative colourway with good secondary demand."
+      },
+      {
+        id:"e-286936815552", source:"ebay", tier:"honorable",
+        brand:"Cartier", model:"Santos De Cartier WSSA0018 Large 2021 — Box & Papers", ref:"WSSA0018",
+        year:"2021", size:"39.8mm", bp:true, cert:null,
+        price:"£6,100", priceEur:"~€7,259",
+        marketVal:"£6,500–7,000",
+        deal:-10, stars:null,
+        seller:"🇬🇧 UK (unverified)",
+        risk:"Seller location not individually verified. Smaller deal score than WSSA0062 pick above.",
+        url:"https://www.ebay.co.uk/itm/286936815552",
+        outlook:"Santos WSSA0018 (steel, no coating) — more restrained colourway, slightly lower deal score than the green WSSA0062 top pick."
+      },
+      {
+        id:"e-257248955630", source:"ebay", tier:"honorable",
+        brand:"Omega", model:"Seamaster Planet Ocean 42mm 2201.50.00 — Box & Papers", ref:"2201.50.00",
+        year:"2009", size:"42mm", bp:true, cert:null,
+        price:"£2,899", priceEur:"~€3,450",
+        marketVal:"£3,200–3,800",
+        deal:-17, stars:null,
+        seller:"🇬🇧 UK (unverified)",
+        risk:"Seller location not individually verified. Older reference — confirm service history.",
+        url:"https://www.ebay.co.uk/itm/257248955630",
+        outlook:"Alternative Planet Ocean 42mm listing. Good deal score but older reference (2009)."
+      },
+      {
+        id:"c-44299091", source:"chrono24", tier:"honorable",
+        brand:"Omega", model:"Seamaster Wave Dial 25418000 — 1994, Box & Papers", ref:"25418000",
+        year:"1994", size:"41mm", bp:true, cert:false,
+        price:"$2,192", priceEur:"~€2,015",
+        marketVal:"$2,500–3,000",
+        deal:-13, stars:null,
+        seller:"🇩🇪 Germany · Private Seller",
+        risk:"30-year vintage — confirm movement service history. Private seller — use Chrono24 Buyer Protection escrow.",
+        url:"https://www.chrono24.com/omega/seamaster--id44299091.htm",
+        outlook:"Original 1994 Bond Seamaster with original papers. Niche vintage collector appeal — not a pure flip. Papers on a 30-year-old piece are notable."
+      }
+    ]
+  },
+  "2026-03-08": {
+    summary: "Market intelligence report — live scraping unavailable today due to browser connectivity issues. Key market data: Rolex Sub 126610LN now €13,500–15,000 (above €12k cap). Tudor BB 58 secondary ~€2,480, fastest-selling reference (12 days median). IWC Mark XX at -29% below retail (~€3,780). Omega Seamaster 300M full-set €3,500–5,500. Cartier Santos WSSA0030 €6,108–6,541. Rolex/Tudor raised 2026 retail prices +5–7%; Omega, IWC, Cartier have NOT raised prices yet — active buying window.",
+    sources: "WatchCharts (March 2026) + market intelligence sources",
+    picks: []
+  },
   "2026-03-06": {
     summary: "Chrono24 + eBay UK sweep (Rolex, Tudor, Omega, IWC, Cartier). Standout: Rolex OP 41 Blue Dial 124300 (2025 card) at -24% from Zeitauktion DE (9,500+ reviews, 4.9★) — discontinued colour dial at €8,806 full set. Rolex Submariner \"Bluesy\" 116613LB Rolesor 2012 at -20% from Munich certified dealer — €9,980. Tudor BB Pro GMT 79470 (2023) at £2,001 on eBay UK with Auth Guarantee (~-22%). IWC Mark XX full set + 8yr warranty at £3,591 (-15%). Cartier Santos Dumont WSSA0022 Dec 2024 at £3,795 (-16%) — essentially new.",
     sources: "Chrono24 (EU, box & papers, 39–42mm, sorted by discount) + eBay UK (Rolex, Tudor, Omega, IWC, Cartier)",
