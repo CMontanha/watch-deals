@@ -153,29 +153,7 @@
 
 ---
 
-### 7. Panerai Luminor Due PAM01046 42mm — 2020, Full Box & Papers
-
-| Field | Detail |
-|---|---|
-| **Reference** | PAM01046 |
-| **Year** | 2020 |
-| **Case size** | 42mm |
-| **Box & Papers** | ✅ Full Set |
-| **Certification** | ✅ eBay Authenticity Guarantee |
-| **Asking price** | £3,895 (~€4,635 / ~$5,059) |
-| **Est. market value** | £4,800–5,500 (~€5,712–6,545) |
-| **Deal score** | **~20% below market** |
-| **Seller location** | 🇬🇧 Winchester, United Kingdom |
-| **Seller feedback** | 100% positive |
-| **Link** | [View on eBay](https://www.ebay.co.uk/itm/327018621739) |
-
-**Resale outlook:** ⭐⭐⭐⭐ Panerai Luminor Due 42mm — the slimmer, dressier Luminor variant at the top of the Panerai 39–42mm range. PAM01046 is the automatic with 3-day power reserve in the thin titanised steel case. Secondary market for Due 42mm 2020 with full set: £4,800–5,500. At £3,895 with Auth Guarantee and 100% UK seller, ~20% below secondary. Panerai Due has a loyal EU collector base.
-
-**Risk flags:** Confirm rubber strap condition and that both straps (rubber + leather) are included in the full set. Note: the Due is slimmer than standard Luminor — confirm preference.
-
----
-
-### 8. Omega Seamaster Planet Ocean 42mm — Orange Bezel, 2017 Full Set
+### 7. Omega Seamaster Planet Ocean 42mm — Orange Bezel, 2017 Full Set
 
 | Field | Detail |
 |---|---|
@@ -197,7 +175,7 @@
 
 ---
 
-### 9. Tudor Black Bay 58 79030B — Blue Dial, 2023 Box & Papers
+### 8. Tudor Black Bay 58 79030B — Blue Dial, 2023 Box & Papers
 
 | Field | Detail |
 |---|---|
@@ -219,7 +197,7 @@
 
 ---
 
-### 10. Omega Seamaster Diver 300M Co-Axial 41mm — 2019 Box & Papers
+### 9. Omega Seamaster Diver 300M Co-Axial 41mm — 2019 Box & Papers
 
 | Field | Detail |
 |---|---|
@@ -248,12 +226,11 @@
 | 1 | Tudor Black Bay GMT 2021 | 79830RB | ✅ | £2,762 (~€3,287) | ~13% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/126075540573) |
 | 2 | Tudor Black Bay 58 2022 — Silver | 79010SG | ✅ | £2,695 (~€3,207) | ~14% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/236654870133) |
 | 3 | Cartier Santos WSSA0018 Large 2021 | WSSA0018 | ✅ | £6,100 (~€7,259) | ~10% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/286936815552) |
-| 4 | IWC Pilot Mark XVII 41mm 2015 | IW326501 | ✅ | £2,961 (~€3,523) | ~15% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/116349000011) |
-| 5 | Breitling Navitimer Chrono 41 Blue | A13324 | ✅ | £3,477 (~€4,138) | ~17% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/377017777198) |
-| 6 | Omega Aqua Terra 39mm Silver 2013 | 231.10.39.61.02.001 | ✅ | £1,650 (~€1,964) | ~20% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/236612336700) |
-| 7 | TAG Heuer Carrera Calibre 5 39mm | WV211B | ✅ | £999 (~€1,189) | ~25% ↓ | ❌ | [View](https://www.ebay.co.uk/itm/127603472802) |
-| 8 | Rolex Explorer 214270 39mm 2017 | 214270 | ✅ | £5,595 (~€6,658) | ~15% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/198059169539) |
-| 9 | Rolex Datejust 41 116300 White | 116300 | ✅ | £6,200 (~€7,378) | ~15% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/297152503210) |
+| 4 | Breitling Navitimer Chrono 41 Blue | A13324 | ✅ | £3,477 (~€4,138) | ~17% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/377017777198) |
+| 5 | Omega Aqua Terra 39mm Silver 2013 | 231.10.39.61.02.001 | ✅ | £1,650 (~€1,964) | ~20% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/236612336700) |
+| 6 | TAG Heuer Carrera Calibre 5 39mm | WV211B | ✅ | £999 (~€1,189) | ~25% ↓ | ❌ | [View](https://www.ebay.co.uk/itm/127603472802) |
+| 7 | Rolex Explorer 214270 39mm 2017 | 214270 | ✅ | £5,595 (~€6,658) | ~15% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/198059169539) |
+| 8 | Rolex Datejust 41 116300 White | 116300 | ✅ | £6,200 (~€7,378) | ~15% ↓ | ✅ | [View](https://www.ebay.co.uk/itm/297152503210) |
 
 ---
 
