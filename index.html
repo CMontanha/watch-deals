@@ -169,6 +169,144 @@
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
+  "2026-03-10": {
+    summary: "Chrono24 EU brand-filtered sweep (countryIds fix confirmed working) + eBay UK partial (Chrome disconnected mid-run). 5 Chrono24 top picks including Cartier Santos WSSA0018 2025 at $7,975 (~19% below market) — best Cartier deal of the week. Breitling Navitimer GMT 41 at $5,237 (~17% below). 3 eBay UK picks identified via WebSearch; prices need direct verification.",
+    sources: "Chrono24 EU (brand-filtered, live) + eBay UK (partial WebSearch)",
+    picks: [
+      {
+        id:"c-45068869", source:"chrono24", tier:"top",
+        brand:"Cartier", model:"Santos De Cartier WSSA0018 — Full Set 2025", ref:"WSSA0018",
+        year:"2025", size:"39.8mm", bp:true, cert:true,
+        price:"$7,975", priceEur:"~€7,337",
+        marketVal:"$9,500–10,500",
+        deal:-19, stars:5,
+        seller:"🇪🇺 EU · Chrono24 Buyer Protection",
+        risk:"Confirm interchangeable strap/bracelet system is included. Verify Chrono24 trust badge and seller rating.",
+        url:"https://www.chrono24.com/cartier/santos-de-cartier--id45068869.htm",
+        outlook:"2025 Santos Large WSSA0018, ADLC steel, full set at €7,337. Cartier +3.4% YoY; Gen Z tailwind. ~19% below EU secondary floor. Most liquid Tier 1 Cartier. Strongest overall deal today."
+      },
+      {
+        id:"c-44569353", source:"chrono24", tier:"top",
+        brand:"Tudor", model:"Black Bay Fifty-Eight — Full Set 2025", ref:"M7939A1A0RU",
+        year:"2025", size:"39mm", bp:true, cert:true,
+        price:"$4,527", priceEur:"~€4,165",
+        marketVal:"$4,900–5,500",
+        deal:-15, stars:5,
+        seller:"🇪🇺 EU · Chrono24 Buyer Protection",
+        risk:"Verify exact dial variant and reference on listing. Confirm bracelet vs strap config.",
+        url:"https://www.chrono24.com/tudor/black-bay-58--id44569353.htm",
+        outlook:"2025 BB58 with full set — Tudor's most portable 39mm reference. In-house MT5402. Tudor top-performing secondary brand two consecutive months. ~15% below secondary. Fastest-selling Tudor reference."
+      },
+      {
+        id:"c-43379219", source:"chrono24", tier:"top",
+        brand:"Breitling", model:"Navitimer Automatic GMT 41 A32310211G1A1", ref:"A32310211G1A1",
+        year:"2022", size:"41mm", bp:true, cert:true,
+        price:"$5,237", priceEur:"~€4,818",
+        marketVal:"$6,200–6,800",
+        deal:-17, stars:4,
+        seller:"🇪🇺 EU · Chrono24 Buyer Protection",
+        risk:"Confirm case condition and bracelet stretch. Ask seller about year of production.",
+        url:"https://www.chrono24.com/breitling/navitimer-automatic-gmt-41---a32310211g1a1--id43379219.htm",
+        outlook:"Navitimer Auto GMT 41 — less common than B01 Chrono, GMT complication growing in collector demand. ~17% below EU secondary. Strong flip candidate. Best Breitling deal this week."
+      },
+      {
+        id:"c-43968269", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M 42mm Green — Unworn Dec 2025 Full Set", ref:"210.30.42.20.10.001",
+        year:"2025", size:"42mm", bp:true, cert:true,
+        price:"$5,862", priceEur:"~€5,393",
+        marketVal:"$6,800–7,200",
+        deal:-17, stars:4,
+        seller:"🇪🇺 EU Trusted Seller",
+        risk:"Confirm EU seller ships to Portugal. Unworn Dec 2025 — within Omega 5yr warranty.",
+        url:"https://www.chrono24.com/omega/omega-seamaster-diver-300-m-42-green--21030422010001--new--unworn--122025-full-set--id43968269.htm",
+        outlook:"Current-gen SMD300M 42mm Green (2024–25 production), unworn Dec 2025 full set. ~17% below retail via grey market channel. Green SMD300M fastest-selling Omega colour in EU. No major risk."
+      },
+      {
+        id:"c-44398420", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M Blue Dial 42mm 210.32.42.20.04.001", ref:"210.32.42.20.04.001",
+        year:"2021", size:"42mm", bp:true, cert:true,
+        price:"$4,974", priceEur:"~€4,576",
+        marketVal:"$5,500–6,200",
+        deal:-15, stars:4,
+        seller:"🇪🇺 EU Trusted Seller",
+        risk:"Confirm exact year and co-axial Master Chronometer movement. Check strap/bracelet configuration.",
+        url:"https://www.chrono24.com/omega/omega-seamaster-diver-300-m--id44398420.htm",
+        outlook:"SMD300M 42mm Master Chronometer blue/blue — flagship Seamaster variant. Omega not raising 2026 retail; wide secondary-to-retail spread. ~15% below EU secondary. Most universally liquid Omega reference."
+      },
+      {
+        id:"c-42273510", source:"chrono24", tier:"honorable",
+        brand:"Cartier", model:"Santos De Cartier WSSA0018 2025 Full Set 'Large'", ref:"WSSA0018",
+        year:"2025", size:"39.8mm", bp:true, cert:true,
+        price:"$8,537", priceEur:"~€7,854",
+        marketVal:"$9,500–10,500",
+        deal:-14, stars:4,
+        seller:"🇪🇺 EU · Chrono24 Buyer Protection",
+        risk:"Same notes as top-pick Santos — verify strap system.",
+        url:"https://www.chrono24.com/cartier/cartier-santos-de-cartier-wssa0018---2025--id42273510.htm",
+        outlook:"2025 WSSA0018 Full Set — identical model to top pick at slightly higher price. Still 14% below secondary market. Good backup option if top pick sells."
+      },
+      {
+        id:"c-41619522", source:"chrono24", tier:"honorable",
+        brand:"Breitling", model:"Navitimer Automatic GMT 41", ref:"A32310",
+        year:"2023", size:"41mm", bp:true, cert:true,
+        price:"$5,820", priceEur:"~€5,354",
+        marketVal:"$6,800",
+        deal:-14, stars:3,
+        seller:"🇪🇺 EU",
+        risk:"Verify case condition and full set completeness.",
+        url:"https://www.chrono24.com/breitling/navitimer-automatic-gmt-41--id41619522.htm",
+        outlook:"Second Navitimer GMT 41 found today — 14% below market, reasonable buy if top GMT pick sells. Less aggressive deal than the A32310211G1A1 listing."
+      },
+      {
+        id:"c-44075409", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Oyster Perpetual 41 124300 Black Dial — Excellent", ref:"124300",
+        year:"2022", size:"41mm", bp:true, cert:true,
+        price:"$9,463", priceEur:"~€8,706",
+        marketVal:"$10,000–11,000",
+        deal:-8, stars:3,
+        seller:"🇪🇺 EU Trusted Seller",
+        risk:"Only ~8% below market — not a screaming deal. Verify condition grade carefully.",
+        url:"https://www.chrono24.com/rolex/rolex-oyster-perpetual-41--id44075409.htm",
+        outlook:"Rolex OP41 124300 in black dial from EU Trusted Seller. Only ~8% below market — near market price but strong Rolex brand + papers gives liquidity assurance. Buy if you need a Rolex position."
+      },
+      {
+        id:"e-157395803271", source:"ebay", tier:"top",
+        brand:"IWC", model:"Portugieser Chronograph IW371604 Silver 41mm — 2024 B&P", ref:"IW371604",
+        year:"2024", size:"41mm", bp:true, cert:null,
+        price:"~£3,750–4,200 est.", priceEur:"~€4,463–4,998 est.",
+        marketVal:"£4,500–5,500",
+        deal:-20, stars:5,
+        seller:"🇬🇧 UK seller (verify)",
+        risk:"⚠️ Price not confirmed — Chrome disconnected. Verify asking price, seller location, and eBay Auth Guarantee status directly on listing.",
+        url:"https://www.ebay.co.uk/itm/157395803271",
+        outlook:"2024 IW371604 with papers — final year of this reference before discontinuation. Rising collector demand for last-of-line Portugieser Chrono cal. 89361. If at estimated price, ~20–25% below market. Highest-priority eBay pick to verify."
+      },
+      {
+        id:"e-145746929593", source:"ebay", tier:"top",
+        brand:"Panerai", model:"Luminor Due 42mm PAM01046 — 2023 B&P", ref:"PAM01046",
+        year:"2023", size:"42mm", bp:true, cert:null,
+        price:"~£3,200–3,700 est.", priceEur:"~€3,808–4,403 est.",
+        marketVal:"£3,800–4,500",
+        deal:-17, stars:4,
+        seller:"🇬🇧 UK seller (verify)",
+        risk:"⚠️ Price not confirmed. PAM01046 is titanium — verify case condition.",
+        url:"https://www.ebay.co.uk/itm/145746929593",
+        outlook:"Panerai Luminor Due 42mm titanium 2023 with B&P. Luminor Due is Panerai's most liquid UK reference. If confirmed at estimated price, ~16–20% below secondary market. Good Tier 2 buy."
+      },
+      {
+        id:"e-286657826492", source:"ebay", tier:"top",
+        brand:"IWC", model:"Portugieser Chronograph IW371404 + Jan 2025 Service — London", ref:"IW371404",
+        year:"2014", size:"42mm", bp:true, cert:null,
+        price:"~£2,200–2,600 est.", priceEur:"~€2,618–3,094 est.",
+        marketVal:"£2,800–3,200",
+        deal:-16, stars:4,
+        seller:"🇬🇧 Canary Wharf, London — Chase Hattan (dealer since 2015)",
+        risk:"⚠️ Price not confirmed. 42mm older ref. Confirm IWC service records are genuine paperwork.",
+        url:"https://www.ebay.co.uk/itm/286657826492",
+        outlook:"Older Portugieser Chrono IW371404 with papers + Jan 2025 full IWC service from established London dealer. Service docs add ~£300–400 demonstrable value. Steady EU demand for Portugieser Chrono family."
+      }
+    ]
+  },
   "2026-03-09": {
     summary: "Full manual redo sweep — 12+ brands across eBay UK (Breitling, Zenith, IWC, Omega AqT, Rolex Explorer/DJ, TAG Heuer, and more). 9 verified top picks (2 duplicates from March 5 removed); all UK sellers with 100%/99.7% feedback and eBay Authenticity Guarantee. Standout: Breitling Navitimer Auto 41 A17326 2024 at £2,660 (~22% below market) — best Breitling pricing seen in weeks. Chrono24 EU filter non-functional via URL this session; fix queued for next automated run.",
     sources: "eBay UK (12+ brands live-scraped) + Chrono24 Top Deals",
