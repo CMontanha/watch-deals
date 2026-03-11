@@ -169,6 +169,72 @@
 <script>
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const REPORTS = {
+  "2026-03-11": {
+    summary: "Partial sweep — Chrome browser intermittently disconnected; Chrono24 picks sourced via indexed search. 3 Chrono24 top picks + honorable mentions. eBay UK unavailable today. Standout: IWC Pilot Chrono 41mm Green IW388104 Unworn 2025 at ~€6,343 (~19% below market, discontinued ref). IWC IW388103 German Trusted Seller ~€7,247 (~15% below). Omega SMD300M White 2024 B&P ~€4,851 (~11% below).",
+    sources: "Chrono24 EU (countryIds filter — DE confirmed for IWC pick) | eBay UK: unavailable (browser disconnected)",
+    picks: [
+      {
+        id:"c-41773614", source:"chrono24", tier:"top",
+        brand:"IWC", model:"Pilot's Watch Chronograph 41mm Green Dial IW388104 — Unworn 2025, B&P", ref:"IW388104",
+        year:"2025", size:"41mm", bp:true, cert:true,
+        price:"$6,895 (~€6,343)", priceEur:"€6,343",
+        marketVal:"€7,500–8,200",
+        deal:-19, stars:5,
+        seller:"🇩🇪 Germany · Trusted Seller",
+        risk:"Seller country confirm live. Verify URL still at --id41773614.htm (not redirected). Check papers match serial.",
+        url:"https://www.chrono24.com/iwc/iwc-unworn-pilots-watch-chronograph-41mm-green-dial-bracelet-iw388104-box--papers-2025--id41773614.htm",
+        outlook:"IW388104 green dial discontinued late 2024 — NOS unworn at ~19% below current secondary. Cal. 69380 manufacture chronograph. Strong collector scarcity premium on green dial. Buy-and-hold asset."
+      },
+      {
+        id:"c-43524094", source:"chrono24", tier:"top",
+        brand:"IWC", model:"Pilot's Watch Chronograph 41mm IW388103 — German Trusted Seller", ref:"IW388103",
+        year:"2023", size:"41mm", bp:true, cert:true,
+        price:"$7,876 (~€7,247)", priceEur:"€7,247",
+        marketVal:"€8,500–9,500",
+        deal:-15, stars:4,
+        seller:"🇩🇪 Germany · Trusted Seller",
+        risk:"Year of production needs confirmation via papers. Standard Trusted Seller escrow protections apply.",
+        url:"https://www.chrono24.com/iwc/pilots-watch-chronograph-41mm-ref-iw388103--id43524094.htm",
+        outlook:"Current-gen IWC Pilot Chrono 41 silver Arabic dial — highest resale velocity variant. ~15% below EU secondary from confirmed German Trusted Seller. Retail ~€8,200 new. Most versatile and liquid Pilot Chrono colourway."
+      },
+      {
+        id:"c-33480383", source:"chrono24", tier:"top",
+        brand:"Omega", model:"Seamaster Diver 300M White Dial 42mm — 2024, Box & Papers", ref:"210.32.42.20.04.001",
+        year:"2024", size:"42mm", bp:true, cert:true,
+        price:"$5,273 (~€4,851)", priceEur:"€4,851",
+        marketVal:"€5,200–5,800",
+        deal:-11, stars:4,
+        seller:"🇪🇺 EU · Trusted Seller (country unconfirmed)",
+        risk:"Reference number and exact dial variant — confirm in listing. Seller country unconfirmed via live scrape — verify EU before committing.",
+        url:"https://www.chrono24.com/omega/omega-seamaster-diver-300m-white--2024--box-and-papers--id33480383.htm",
+        outlook:"White-dial 210.32 SMD300M 2024 with B&P — ~11% below EU secondary. Under 2 years old, partial factory warranty likely active. White dial trades above blue/black on scarcity. Sound liquid entry."
+      },
+      {
+        id:"c-44865366", source:"chrono24", tier:"honorable",
+        brand:"Rolex", model:"Datejust 41 126300 White Dial — NEW 2025, Unworn", ref:"126300",
+        year:"2025", size:"41mm", bp:true, cert:true,
+        price:"$11,290 (~€10,387)", priceEur:"€10,387",
+        marketVal:"€10,500–12,000",
+        deal:-8, stars:null,
+        seller:"🇪🇺 EU · Trusted Seller",
+        risk:"Modest deal score (~8%). Unworn status and year need live verification. Within €12k filter.",
+        url:"https://www.chrono24.com/rolex/rolex-new-2025-datejust-41mm-126300-stainless-steel-oyster-white-dial--id44865366.htm",
+        outlook:"2025 unworn DJ41 white dial at ~8% below secondary. Modest discount but solid provenance and full warranty. Worth monitoring for price drops."
+      },
+      {
+        id:"c-43851933", source:"chrono24", tier:"honorable",
+        brand:"IWC", model:"Pilot Chronograph Full Set", ref:"IW388xxx",
+        year:"2022", size:"41mm", bp:true, cert:true,
+        price:"$8,575 (~€7,889)", priceEur:"€7,889",
+        marketVal:"€8,500–9,500",
+        deal:-6, stars:null,
+        seller:"🇪🇺 EU · Trusted Seller",
+        risk:"Smaller deal score vs. top picks. Reference variant needs confirmation.",
+        url:"https://www.chrono24.com/iwc/iwc-pilot-chronograph--id43851933.htm",
+        outlook:"Fallback IWC Pilot Chrono option if top two IWC picks are no longer available. ~6% below market — fair but not compelling."
+      }
+    ]
+  },
   "2026-03-10": {
     summary: "Full manual sweep (automated 8:15 AM run failed). 6 Chrono24 EU top picks + 4 eBay UK top picks — all live-verified with confirmed prices. Standout: Tudor BB41 79540 at £1,690 (~26% below market, 95 watchers, eBay AG) + Omega SMD300M White Chrono24 Direct at €4,200 (~22% below, 148 views/48h). Tudor GMT Pepsi appears on both platforms (Chrono24 €3,690 + eBay £2,129). Rolex OP41 Blue eBay OBO at £6,492 (~16% below). Breitling Navitimer B01 41mm Unworn £5,938 eBay AG.",
     sources: "Chrono24 EU (countryIds filter — DE/IT confirmed) + eBay UK (live-scraped, .srp-results li)",
