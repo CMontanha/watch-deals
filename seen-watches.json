@@ -1,6 +1,6 @@
 {
   "description": "Tracks all watch listings already shown in previous daily reports. The daily search agent reads this file at start, excludes any matching IDs, and appends new IDs after generating the report.",
-  "last_updated": "2026-03-11",
+  "last_updated": "2026-03-12",
   "chrono24_ids": [
     "45062681",
     "43449821",
